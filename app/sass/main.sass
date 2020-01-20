@@ -1,0 +1,174 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+html
+	overflow-x: hidden !important
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+// Settings
+
+header, section
+	position: relative
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1.2
+
+.hidden
+	display: none
+
+// h1-h6
+h1
+	font-size: 48px
+
+h2
+	font-size: 38px
+
+h3
+	font-size: 32px
+
+h4
+	font-size: 28px
+
+h5
+	font-size: 22px
+
+h6
+	font-size: 18px
+
+// Links
+
+a
+	color: $accent
+	text-decoration: none
+	&:focus, &:hover, &:active
+		text-decoration: none
+
+// List
+ul, li
+	padding: 0
+	margin: 0 
+	list-style-type: none
+
+// Button
+
+button
+	outline: none
+	cursor: pointer
+
+.btn	
+
+
+// Modal
+.modal
+	max-width: 500px
+	margin: 0 auto
+	background: #fff
+	position: relative
+
+// Section
+section 
+
+
+// MagnificPopup Animation
+	
+// Magnific
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg 
+	opacity: 0
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
+
+
+// ====== 3d unfold ======
+
+.mfp-3d-unfold 
+	
+	.mfp-content 
+		perspective: 2000px 
+	
+	/* start state */
+	.mfp-with-anim 
+		opacity: 0
+		transition: all 0.3s ease-in-out
+		transform-style: preserve-3d
+		transform: rotateY(-60deg)
+	
+	&.mfp-bg 
+		opacity: 0
+		transition: all 0.5s
+	
+	/* animate in */
+	&.mfp-ready 
+		.mfp-with-anim 
+			opacity: 1
+			transform: rotateY(0deg)
+		
+		&.mfp-bg 
+			opacity: 0.8
+	
+	/* animate out */
+	&.mfp-removing 
+		
+		.mfp-with-anim 
+			transform: rotateY(60deg)
+			opacity: 0
+		
+		&.mfp-bg 
+			opacity: 0 
+
+@import "media" // Always at the end
