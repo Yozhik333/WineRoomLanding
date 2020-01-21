@@ -36,3 +36,28 @@ $(function () {
 	});
 
 });
+
+// top-line
+
+$('.top-line__burger').click(function(event) {
+	$(".top-line__burger,.top-line__menu").toggleClass('burger-active');
+	$('body').toggleClass('lock');
+});
+
+$(function() {
+	$(".handler span").on("click", function() {
+		$(this)
+			.addClass("choosen")
+			.siblings()
+			.removeClass("choosen");
+		$(".slide")
+			.eq($(this).index())
+			.addClass("show")
+			.siblings()
+			.removeClass("show");
+	});
+});
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);

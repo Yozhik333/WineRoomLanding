@@ -57,9 +57,11 @@ h1, h2, h3, h4, h5, h6
 // h1-h6
 h1
 	font-size: 48px
+	font-family: "Playfair Display"
 
 h2
 	font-size: 38px
+	font-family: "Playfair Display"
 
 h3
 	font-size: 32px
@@ -76,10 +78,12 @@ h6
 // Links
 
 a
-	color: $accent
+	color: #000
 	text-decoration: none
 	&:focus, &:hover, &:active
 		text-decoration: none
+	&:hover
+		color: $accent
 
 // List
 ul, li
@@ -93,7 +97,75 @@ button
 	outline: none
 	cursor: pointer
 
-.btn	
+.btn
+	position: relative
+	display: inline-block
+	padding: 10px 17px
+	text-align: center
+	color: #fff
+	font-size: 12px
+	border-radius: 10px
+	box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+	background-image: linear-gradient(to top, #c10029 0%, $accent 100%)
+	transition: .4s ease
+	overflow: hidden
+	outline: none !important
+	&:hover
+		color: #ff9e9e
+
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		transform: rotate(-60deg)
+		height: 100%
+		background: #fff
+		transition: all .4s ease
+		animation-name: button-blink
+		animation-timing-function: ease-in-out
+		animation-iteration-count: infinite
+		animation-duration: 3s
+
+@keyframes button-blink
+	0%
+		left: -200%
+		opacity: 0.7
+
+	100%
+		left: 100%
+		opacity: 0
+
+li>a
+	padding: 0 4px 0 3px
+	position: relative
+	cursor: pointer
+	// margin: 6px 2px 0
+	border: 1px solid #fff
+	border-radius: 2px
+	transition: all .4s ease
+	&::before
+		position: absolute
+		content: ''
+		width: 0%
+		height: 100%
+		background: lighten($accent, 15)
+		top: 0
+		left: 50%
+		z-index: -1
+		transition: all 0s ease
+	&:hover
+		color: #ffffff
+		box-shadow: 0px 4px 10px 2px rgba(blue, 0.2)
+		&::before
+			position: absolute
+			content: ''
+			width: 100% 
+			height: 100%
+			background: lighten($accent, 15)
+			top: 0
+			left: 0%
+			z-index: -1
+			transition: all .4s ease
 
 
 // Modal
@@ -170,5 +242,239 @@ section
 		
 		&.mfp-bg 
 			opacity: 0 
+
+.top-line
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 333
+	background: #fff
+	&-wrap
+		max-width: 103.25em
+		margin: 0 auto
+		padding: 0 0.8em
+		
+		.top-line-body
+			position: relative
+			display: flex
+			justify-content: space-between
+			align-items: center
+			height: 114px
+			padding: 1em 0 0.7em
+			&::before
+				content: ''
+				width: 92%
+				height: 2px
+				top: 50%
+				right: 0
+				background: #c4c4c4
+				position: absolute
+			.brand
+				display: flex
+				.logo
+					flex: 0 0 90px
+					transition: .4s ease
+					&:hover
+						transform: scale(1.2) rotate(-360deg)
+					img
+						max-width: 100%
+						display: block
+		
+			.top-line__menu
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				// max-width: 90em
+				width: 75%
+				height: 100%
+				.top-menu, .btm-menu
+					// padding: 10px 0
+					ul
+						display: flex
+						align-items: center
+				.top-menu
+					padding-top: 0.5em
+					ul
+						li
+							margin: 0 0.5em
+				.btm-menu
+					text-transform: uppercase
+					max-width: 100%	
+					width: 100%
+					padding-top: 1.3em
+					ul
+						li:not(:last-child)
+							border-right: 1px solid #bbbbbb
+						li
+							padding: 0.4em 0.1em
+							a
+								font-size: 14px
+								padding: 7px 4px 9px 4px
+								img
+									margin-right: 5px
+
+			.top-line__media
+				display: flex
+				justify-content: flex-end
+				height: 100%
+				.btn
+					align-self: flex-start
+				.top-line-social
+					display: flex
+					flex-flow: wrap
+					align-items: center
+					width: 33%
+					margin-left: 1em
+					a
+						font-size: 1.3em
+						margin: 0 0 0 10px
+					.search, .cart
+						font-size: 1.7em
+						color: $accent
+					.instagram
+						display: flex
+						flex-direction: column
+						text-align: center
+						justify-content: center
+						color: #fff
+						background: linear-gradient(to top, #c10029 0%, $accent 100%)
+						width: 27px
+						height: 27px
+						border-radius: 1em
+
+			.top-line__burger
+				display: none
+
+.main-header
+	max-height: 830px
+	height: 100%
+	padding: 114px 0 0 0
+	position: relative
+	&::before
+		content: ''
+		background: url("../img/header-bg.png") no-repeat center bottom
+		position: absolute
+		z-index: 6
+		left: 0
+		right: 0
+		bottom: -5px
+		width: 100%
+		height: 100%
+	&-wrap
+		position: relative
+		margin: 0 auto
+		max-width: 1920px
+		width: 100%
+		max-height: 830px
+		height: 100vh
+		&::before
+			content: ''
+			background: url("../img/header-el.svg") no-repeat
+			background-size: cover
+			background-color: #000000
+			width: 35.6875em
+			height: 33.75em
+			left: -9em
+			top: -11.5em
+			position: absolute
+			z-index: 7
+		&::after
+			content: ''
+			background: url("../img/header-el1.svg") no-repeat
+			background-size: cover
+			width: 49.8125em
+			height: 36.5em
+			position: absolute
+			z-index: 7
+			bottom: -50px
+			right: 0
+
+	.header-slider
+		height: 100vh
+		// height: calc(var(--vh, 1vh) * 100)
+		position: relative
+		overflow: hidden
+		&::before
+			content: ''
+			width: 100%
+			height: 721px
+			position: absolute
+			background-color: #02020375
+			left: 0
+			top: 0
+			z-index: 4
+			opacity: 1
+		&::after
+			content: ''
+			width: 40%
+			height: 100px
+			background-color: green
+			position: absolute
+			box-shadow: 0px 0px 100px 150px #000
+			top: 0
+			left: 0
+			z-index: 6
+			opacity: 0.5
+
+		.handler
+			max-width: 500px
+			width: 100%
+			height: 50px
+			position: absolute
+			left: 70px
+			bottom: 130px
+			z-index: 25
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			transform: translateY(-50%)
+			span
+				display: block
+				height: 5px
+				width: 1em
+				background-color: red
+				transition: .4s ease
+				cursor: pointer
+				border-radius: 0 5px 5px 0
+				&:hover
+					width: 2em
+			.choosen
+				width: 0
+				&::before
+					content: 'Видео'
+					position: absolute
+					top: -10px
+					color: #fff
+		
+		.handler span.choosen:hover
+			width: 0
+			
+		.slide
+			max-width: 1926px
+			width: 100%
+			max-height: 721px
+			height: 100%
+			position: absolute
+			opacity: 0
+			overflow: hidden
+			transition: 1s ease
+			img
+				width: 100%
+				height: 100%
+				
+		.show
+			max-width: 1920px
+			width: 100%
+			max-height: 721px
+			height: 100%
+			opacity: 1
+			z-index: 3
+
+
+.first-sect
+	height: 500px
+	background: #b8b8b8
+
 
 @import "media" // Always at the end
