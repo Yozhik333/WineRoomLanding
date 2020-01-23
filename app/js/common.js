@@ -11,6 +11,8 @@ $(function () {
 			fixedContentPos: false
 		});
 	});
+
+	new WOW().init();
 	
 	// Owl-Carousel;
 	// $(".owl-carousel").owlCarousel();
@@ -89,8 +91,8 @@ $('.slider-1').on('initialized.owl.carousel changed.owl.carousel', function (e) 
 		0: {
 			items: 1
 		},
-		600: {
-			items: 3
+		700: {
+			items: 2
 		},
 		1000: {
 			items: 3
@@ -138,7 +140,7 @@ $('.slider-2').owlCarousel({
 		},
 		600: {
 			items: 1,
-			margin: 5,
+			// margin: 5,
 		},
 		1200: {
 			items: 3

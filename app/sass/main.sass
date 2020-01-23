@@ -168,6 +168,12 @@ li>a
 			transition: all .4s ease
 
 
+// Owl-carousel
+
+.owl-carousel
+		touch-action: manipulation
+
+
 // Modal
 .modal
 	max-width: 500px
@@ -427,11 +433,11 @@ section
 			border-radius: 10em
 			border: 2px solid #ffffff67
 			transition: .4s ease
-			animation-name: video-wine
-			animation-duration: 2s
-			// animation-iteration-count: infinite
-			animation-timing-function: 8s
-			animation-delay: 6s
+			// animation-name: video-wine
+			// animation-duration: 2s
+			// // animation-iteration-count: infinite
+			// animation-timing-function: 8s
+			// animation-delay: 6s
 			&::before
 				content: '►'
 				position: absolute
@@ -450,26 +456,27 @@ section
 				transition: .4s ease
 			&:hover
 				background: darken(#69002faf, 5%)
+				transform: scale(1.03)
 
-			@keyframes video-wine
-				0%
-					transform: rotate(0deg) scale(1.05)
+			// @keyframes video-wine
+			// 	0%
+			// 		transform: rotate(0deg) scale(1.05)
 
-				25%
-					transform: rotate(25deg)
+			// 	25%
+			// 		transform: rotate(25deg)
 
-				50%
-					transform: rotate(-25deg)
+			// 	50%
+			// 		transform: rotate(-25deg)
 
-				75%
-					transform: rotate(25deg)
+			// 	75%
+			// 		transform: rotate(25deg)
 
-				100%
-					transform: rotate(0deg)
+			// 	100%
+			// 		transform: rotate(0deg)
 
 	.header-slider
 		height: 100vh
-		height: calc(var(--vh, 1vh) * 100)
+		// height: calc(var(--vh, 1vh) * 100)
 		position: relative
 		overflow: hidden
 		&::before
@@ -501,7 +508,7 @@ section
 			height: 3em
 			position: absolute
 			left: 8em
-			bottom: 8.5em
+			bottom: 1.5em
 			z-index: 25
 			display: flex
 			justify-content: space-around
@@ -552,7 +559,7 @@ section
 
 .first-sect
 	height: 100%
-	padding: 0 0 7em 0
+	padding: 1.7em 0 7em 0
 	&__headline
 		max-width: 61.25em
 		margin: 0 auto
@@ -607,10 +614,10 @@ section
 						display: none
 						margin-top: 2em
 						input
-							width: 1.5em
-							border: 1px solid #ebebeb
+							width: 3em
+							border: 1px solid #fdfdfd
 							border-radius: 10em
-							padding-left: 7px
+							padding-left: 13px
 						span
 							display: flex
 							justify-content: center
@@ -683,7 +690,7 @@ section
 				position: relative
 				&::before
 					content: ''
-					width: 93%
+					width: 89%
 					height: 2px
 					background: #777777
 					position: absolute
@@ -702,7 +709,8 @@ section
 	background-image: url(../img/slider-2-bg.jpg)
 	background-repeat: no-repeat
 	background-position: center center
-	padding: 8em 0 8em
+	background-size: cover
+	padding: 4em 0 8em
 	height: 100%
 	&-wrap
 		max-width: 100%
@@ -716,6 +724,7 @@ section
 				font-family: "Playfair Display"
 				font-size: 2.2em
 				font-weight: 400
+				margin-bottom: 1em
 			p
 				font-size: 18px
 
