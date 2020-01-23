@@ -132,4 +132,16 @@ $('.slider-2').owlCarousel({
 	nav: true,
 	navText: ['<i class="prev">&#8249;</i>', '<i class="next">&#8250;</i>'],
 	center: true,
+	responsive: {
+		0: {
+			items: 1
+		},
+		600: {
+			items: 1,
+			margin: 5,
+		},
+		1200: {
+			items: 3
+		},
+	}
 })

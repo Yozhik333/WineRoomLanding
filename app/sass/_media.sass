@@ -24,7 +24,7 @@
 					width: 100%
 					height: 100%
 					background-color: #fff
-					opacity: 0.7
+					// opacity: 0.7
 					flex-direction: row
 					justify-content: space-around
 					align-items: center
@@ -43,6 +43,14 @@
 						ul
 							li
 								border-right: 0px
+
+				.top-line__media
+					position: fixed
+					flex-flow: nowrap
+					display: none
+					&-social
+						flex-flow: nowrap
+
 				.top-line__burger
 					display: block
 					position: relative
@@ -81,14 +89,198 @@
 					span
 						transform: scale(0)
 
+	.main-header
+		height: 100vh
+		margin-bottom: 10em
+		&::before
+			bottom: none
+		&::after
+			display: none
+		&-wrap
+			.main-header__headline
+				top: 8em
+			.video
+				top: 33%
+				right: 40%
+			.header-slider
+				width: 100vw
+				&::after
+					display: none
+				.handler
+					bottom: 10%
+					left: 15%
+				.show
+					width: 100vw
+					height: 100vh
+
+	.second-sect
+		&-wrap
+			padding: 0 30px
+			.second-sect__headline
+			.second-sect-slider
+				.slider-2
+					&::before
+						display: none
+					&::after
+						display: none
+					.item
+						margin: 0 auto
+						width: 600px
+						height: 400px
+						img
+							width: 100%
+							height: 100%
+					.center
+						transform: scale(1)
+						box-shadow: none
+					.owl-stage-outer
+						padding: 4em 0
+			.second-sect__btns
+				width: 50%
+
+	.main-footer
+		.footer-wrap
+			.footer-left
+				.footer-nav
+					// align-items: center
+					ul
+						padding: 0.4em 0.4em 0
+						li
+							padding: 0.7em 0
+			.footer-right
+				flex-flow: row wrap
+				justify-content: flex-end
+				&__call
+					padding-top: 1em
+
 // ≥992px
 +media-breakpoint-down(md)
 
 // ≥768px
 +media-breakpoint-down(sm)
 
+	.main-footer
+		height: 100%
+		background-image: none
+		.footer-wrap
+			flex-flow: wrap
+			justify-content: center
+			.footer-left
+				flex-flow: wrap
+				.footer-nav
+					// align-items: center
+					ul
+						padding: 0.4em 0.4em 0
+						li
+							padding: 0.7em 0
+			.footer-right
+				width: 70%
+				flex-flow: row wrap
+				justify-content: space-between
+				&__call
+					font-size: 1.2em
+					a
+						padding: 0.3em 0
+
+	.main-header
+		&-wrap
+			.main-header__headline
+				top: 8em
+				left: 3em
+				font-size: 0.8em
+			.video
+			.header-slider
+				.handler
+				.show
+
+	.second-sect
+		&-wrap
+			padding: 0 30px
+			.second-sect__headline
+			.second-sect-slider
+				.slider-2
+					&::before
+						display: none
+					&::after
+						display: none
+					.item
+						margin: 0 auto
+						width: 450px
+						height: 300px
+						img
+							width: 100%
+							height: 100%
+					.center
+						transform: scale(1)
+						box-shadow: none
+
+			.second-sect__btns
+				width: 80%
+
 // ≥576px
 +media-breakpoint-down(xs)
+
+	.second-sect
+		&-wrap
+			// padding: 0 30px
+			.second-sect__headline
+			.second-sect-slider
+				.slider-2
+					&::before
+						// display: none
+					&::after
+						// display: none
+					.item
+						margin: 0 auto
+						width: 450px
+						height: 300px
+						img
+							width: 100%
+							height: 100%
+					.center
+						transform: scale(1)
+						box-shadow: none
+
+			.second-sect__btns
+				width: 90%
+				flex-flow: wrap
+				margin: 0 auto
+				.btn
+					margin: 0.5em 0
+
+	.main-footer
+		.footer-wrap
+			.footer-left
+				flex-flow: wrap
+				justify-content: center
+				align-items: center
+				.footer-nav
+					// align-items: center
+					font-size: 1.2em
+					flex-flow: wrap
+					ul
+						padding: 0.4em 0.4em 0
+						li
+							padding: 0.7em 0
+			.footer-right
+				flex-flow: row wrap
+				justify-content: space-around
+				&__call
+					padding-top: 1em
+					font-size: 1.1em
+
+
+	.main-header
+		&-wrap
+			.main-header__headline
+				top: 8em
+				left: 3em
+				font-size: 0.6em
+			.video
+			.header-slider
+				.handler
+				.show
+
 
 
 /*==========  Mobile First  ==========*/

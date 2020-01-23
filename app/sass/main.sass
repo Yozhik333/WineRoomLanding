@@ -358,7 +358,7 @@ section
 		z-index: 6
 		left: -62px
 		background-color: #fff
-		bottom: -5px
+		bottom: -7px
 		width: 2000px
 		height: 100%
 	&-wrap
@@ -703,6 +703,7 @@ section
 	background-repeat: no-repeat
 	background-position: center center
 	padding: 8em 0 8em
+	height: 100%
 	&-wrap
 		max-width: 100%
 		margin: 0 auto
@@ -726,7 +727,7 @@ section
 				&::before
 					content: ''
 					width: 6.25em
-					height: 100%
+					height: 80%
 					position: absolute
 					left: 0
 					top: 50%
@@ -737,7 +738,7 @@ section
 				&::after
 					content: ''
 					width: 6.25em
-					height: 100%
+					height: 80%
 					position: absolute
 					right: 0
 					top: 50%
@@ -789,10 +790,87 @@ section
 		.second-sect__btns
 			margin: 0 auto
 			display: flex
-			justify-content: space-between
+			justify-content: space-around
 			margin-top: 3em
-			width: 23%
+			width: 27%
 			.btn
+
+
+.main-footer
+	background-image: url("../img/footer-bg.webp")
+	background-repeat: no-repeat
+	background-position: 43% -5%
+	height: 215px
+	.footer-wrap
+		max-width: 103.25em
+		margin: 0 auto
+		padding: 1em 0.8em
+		display: flex
+		justify-content: space-between
+		align-items: center
+		// flex-flow: wrap
+		.footer-left
+			display: flex
+			.brand
+				display: flex
+				.logo
+					flex: 0 0 129px
+					transition: .4s ease
+					&:hover
+						transform: scale(1.2) rotate(-360deg)
+					img
+						max-width: 100%
+						display: block
+			.footer-nav
+				display: flex
+				justify-content: space-between
+				// align-items: center
+				ul
+					padding: 1em 1em 0
+					li
+						padding: 0.2em 0
+		.footer-right
+			display: flex
+			justify-content: space-between
+			width: 30%
+			&__call
+				display: flex
+				flex-flow: column wrap
+				padding-top: 2em
+				a
+					span
+						font-weight: bold
+						padding-right: 1em
+			&__social
+				display: flex
+				flex-flow: column wrap
+				margin-top: 0.8em
+				.footer-social
+					display: flex
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						margin: 0 0.2em
+						width: 47px
+						height: 47px
+						box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+						background-image: radial-gradient(circle 31px at 49.14% 64.24%, #ff1044 0%, $accent 100%)
+						border-radius: 10em
+						.fa
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 1.7em
+							height: 1.7em
+							font-size: 1.5em
+							background: #fff
+							border-radius: 10em
+				.maint
+					margin: 0.5em auto 0
+
+
+
 
 
 @import "media" // Always at the end
