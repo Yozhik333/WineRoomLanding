@@ -1,0 +1,99 @@
+	<div id="menu" class="top-line">
+		<div class="top-line-wrap">
+
+			<div class="top-line-body">
+
+				<div class="brand">
+					<a class="logo" href="index.html"><img src="img/logo.webp" alt="Логотип WineRoom"></a>
+				</div>
+				<!-- /.brand -->
+
+				<div class="top-line__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- /.top-line__burger -->
+
+				<div class="top-line__menu">
+
+					<div class="brand">
+						<a class="logo" href="index.html"><img src="img/logo.webp" alt="Логотип WineRoom"></a>
+					</div>
+					<!-- /.brand -->
+
+					<nav class="top-menu">
+						<ul>
+							<li><a href="brands.html">Бренды</a></li>
+							<li><a href="#">Католог</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">О заведении</a></li>
+							<li><a href="#">Галерея</a></li>
+						</ul>
+					</nav>
+
+					<nav class="btm-menu">
+						<ul>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Вино</a></li>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Шампанское и игристые вина</a></li>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Водка</a></li>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Виски и джин</a></li>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Пиво</a></li>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Вода и соки</a></li>
+							<li><a href="#"><i class="fa fa-beer" aria-hidden="true"></i>Наборы</a></li>
+						</ul>
+					</nav>
+
+					<div class="license">
+						<p>Номер лицензии <span>17003717</span></p>
+					</div>
+					<!-- /.license -->
+
+					<div class="social">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					</div>
+
+				</div>
+				<!-- /.top-line__menu -->
+
+				<div class="top-line__media">
+					<div class="top-line_btn">
+						<a href="#" class="btn">Заказать звонок</a>
+					</div>
+					<div class="top-line-social">
+						<div class="social">
+							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						</div>
+						<div class="searches">
+							<a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+							<a href="#" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /.top-line__media -->
+
+
+			</div>
+			<!-- /.top-line__body -->
+
+		</div>
+		<!-- /.top-line-wrap -->
+	</div>
+	<!-- /.top-line -->
+
+<script>
+	$('.top-line__burger').click(function(event) {
+		$(".top-line__burger,.top-line__menu").toggleClass('burger-active');
+		$('body').toggleClass('lock');
+	});
+</script>

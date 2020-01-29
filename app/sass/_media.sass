@@ -308,19 +308,24 @@
 				width: 50%
 
 	.main-footer
+		background-position: 47% -15%
 		.footer-wrap
+			justify-content: center
 			.footer-left
+				display: none
 				.footer-nav
-					// align-items: center
-					ul
-						padding: 0.4em 0.4em 0
-						li
-							padding: 0.7em 0
+					// // align-items: center
+					// ul
+					// 	padding: 0.4em 0.4em 0
+					// 	li
+					// 		padding: 0.7em 0
 			.footer-right
-				flex-flow: row wrap
-				justify-content: flex-end
+				flex-flow: column
+				width: auto
+				// flex-flow: row wrap
+				// justify-content: flex-end
 				&__call
-					padding-top: 1em
+					padding-top: 0
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -389,23 +394,11 @@
 							width: 100%
 
 	.main-footer
-		height: 100%
-		background-image: none
 		.footer-wrap
-			flex-flow: wrap
+			text-align: center
 			justify-content: center
-			.footer-left
-				flex-flow: wrap
-				.footer-nav
-					// align-items: center
-					ul
-						padding: 0.4em 0.4em 0
-						li
-							padding: 0.7em 0
 			.footer-right
-				width: 70%
-				flex-flow: row wrap
-				justify-content: space-between
+				align-items: center
 				&__call
 					font-size: 1.2em
 					a
@@ -600,24 +593,24 @@
 
 	.main-footer
 		.footer-wrap
-			.footer-left
-				flex-flow: wrap
-				justify-content: center
-				align-items: center
-				.footer-nav
-					// align-items: center
-					font-size: 1.2em
-					flex-flow: wrap
-					ul
-						padding: 0.4em 0.4em 0
-						li
-							padding: 0.7em 0
+			padding: 0
+			// .footer-left
+			// 	// flex-flow: wrap
+			// 	// justify-content: center
+			// 	// align-items: center
+			// 	.footer-nav
+			// 		// align-items: center
+			// 		// font-size: 1.2em
+			// 		// flex-flow: wrap
+			// 		// ul
+			// 		// 	padding: 0.4em 0.4em 0
+			// 		// 	li
+			// 		// 		padding: 0.7em 0
 			.footer-right
-				flex-flow: row wrap
+				flex-flow: column wrap
 				justify-content: space-around
 				&__call
-					padding-top: 1em
-					font-size: 1.1em
+					font-size: 1.2em
 
 
 
