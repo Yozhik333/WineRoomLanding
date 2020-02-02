@@ -960,15 +960,46 @@ section
 	background-repeat: no-repeat
 	background-size: cover
 	padding: 2em 0 4em
+	&::before
+		content: ''
+		background: url("../img/header-el.svg") no-repeat
+		background-size: cover
+		width: 35.6875em
+		height: 33.75em
+		left: -9em
+		top: -19.5em
+		position: absolute
+	&::after
+		content: ''
+		background: url("../img/header-el1.svg") no-repeat
+		background-size: cover
+		width: 49.8125em
+		height: 36.5em
+		position: absolute
+		bottom: -8em
+		right: -4em
 	&-wrap
 		max-width: 103.25em
 		margin: 0 auto
 		padding: 0 0.8em
+		position: relative
+		z-index: 1
 		h2
 			font-size: 2em
 			font-weight: 400
 			color: #fff
-			margin-bottom: 5em
+			margin-bottom: 6em
+		.ref-path
+			ul
+				display: flex
+				li
+					>a
+						border: none
+						padding: 0 10px
+						color: #fff
+				li:not(:last-child)
+					border-right: 1px solid #bbbbbb
+
 
 .brands-cards
 	padding: 2em 0
@@ -978,26 +1009,42 @@ section
 			h2
 				font-weight: 400
 				margin: 1em 0
-			form
+			.selects
+				display: inline-block
+				position: relative
+				cursor: pointer
+				margin-right: 2.5em
 				select
+					display: inline-block
 					position: relative
 					appearance: none
 					padding: 0.2em 0 0.2em 1em
 					background: #f7f7f7
 					width: 23em
-					height: 2em
+					height: 2.5em
 					font-style: italic
 					color: #444444
+					cursor: pointer
 					// outline: 1px solid $accent
 					border: none
-					&::selection
-						color: $accent
-					&::before
-						content: 'f'
-						position: absolute
-						z-index: 2
-						width: 1em
-						height: auto
+				&::after
+					content: '\f107'
+					font-family: 'fontawesome'
+					border-radius: 10em
+					// padding: 0 0 8px
+					display: flex
+					justify-content: center
+					align-items: center
+					font-size: 2em
+					color: #fff
+					position: absolute
+					right: 8px
+					top: -4px
+					z-index: 1
+					width: 1.3em
+					height: 1.3em
+					box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75);
+					background-image: linear-gradient(to top, #c10029 0%, #69002f 100%)
 		.brands-slider-wrap
 			max-width: 103.25em
 			min-height: 900px
