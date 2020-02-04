@@ -269,17 +269,14 @@
 	.first-sect
 		padding: 1.7em 0 0 0
 		.slider__body
-			.slider
-				margin: 0 auto 5em
-				.slider-1
+			.catalog-slider-wrap
+				.catalog-slider
 					.item
-						margin: 0 auto
-					.owl-stage-outer
-						padding: 4em 0 7em
-				.slider-counter
-					&::before
-						width: 70%
-						left: 15%
+						.wine-card
+							.item__buy
+								visibility: visible
+								opacity: 1
+
 
 	.second-sect
 		&-wrap
@@ -326,6 +323,84 @@
 				// justify-content: flex-end
 				&__call
 					padding-top: 0
+
+	// Brand-Card ==================================================================================================================>
+
+	.single-brands
+		&::before
+			bottom: -1%
+		.brand-wrap
+			.ref-path
+				ul
+					flex-flow: wrap
+			.brand
+				align-items: center
+				margin: 2.5em 0 5.5em
+				img
+					max-width: 100%
+				p
+					width: 100%
+
+	.other-cards
+		.brands-cards-wrap
+			h2
+				margin-top: 0
+			p
+				margin: 0
+			.brands-slider-wrap
+				.brands-slider
+					.item
+						.card
+							border: 1px solid #a0a0a0
+							padding: 2.1em 2em 3.3em
+							&::before
+								border: 1px solid #a0a0a0
+							.black-btn
+								visibility: visible
+								opacity: 1
+								bottom: 15px
+					.owl-nav
+						.owl-prev,
+						.owl-next
+							bottom: -1.5em
+			.slider-counter
+				margin: 1.5em 0 3.5em
+
+	.brands-cards
+		.brands-cards-wrap
+			&::before
+				bottom: -1%
+			.brands-slider-wrap
+				.brands-slider
+					.item
+						.card
+							border: 1px solid #a0a0a0
+							padding: 2.1em 2em 3.3em
+							&::before
+								border: 1px solid #a0a0a0
+							.black-btn
+								visibility: visible
+								opacity: 1
+								bottom: 15px
+					.owl-nav
+						.owl-prev,
+						.owl-next
+							bottom: -1.5em
+				.slider-counter
+					margin: 1.5em 0 3.5em
+
+	// Catalog
+
+	.catalog-cards
+		.catalog-wrap
+			.catalog-slider-wrap
+				.catalog-slider
+					.item
+						.wine-card
+							.item__buy
+								visibility: visible
+								opacity: 1
+
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -436,16 +511,7 @@
 						width: auto
 						height: auto
 
-	.first-sect
-		.slider__body
-			.slider
-				.slider-1
-					.item
-					.owl-stage-outer
-				.slider-counter
-					&::before
-						width: 60%
-						left: 15%
+
 
 	.second-sect
 		&-wrap
@@ -545,18 +611,6 @@
 					span
 						width: 4em
 				.show
-
-	.first-sect
-		.slider__body
-			.slider
-				.slider-1
-					.item
-						margin: 0 auto
-					.owl-stage-outer
-						padding: 4em 0 7em
-				.slider-counter
-					&::before
-						display: none
 
 	.second-sect
 		padding: 4em 0 5em
