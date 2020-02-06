@@ -402,6 +402,48 @@
 								opacity: 1
 
 
+	// Contacts
+
+	.contacts
+		.contacts-wrap
+			.address
+				left: 23%
+
+	.gallery
+		padding: 1em 0
+		&-wrap
+			.gallery-slider-wrap
+				.gallery-slider
+					.item
+						width: 50%
+						height: 25%
+						margin: 0 auto
+					.center
+						box-shadow: none
+						
+					.owl-stage-outer
+						padding: 4em 0
+					.owl-nav
+						.owl-prev
+							right: 80%
+						.owl-next
+							left: 80%
+
+	// Company
+
+	.company
+		.company-wrap
+			p
+				width: 100%
+
+	.points
+		&-wrap
+			h2
+				margin: 0 0 1.5em
+			.points__items-wrap
+				flex-flow: wrap
+				justify-content: center
+
 // ≥992px
 +media-breakpoint-down(md)
 
@@ -429,6 +471,37 @@
 					.top-menu
 						ul
 							width: 100%
+
+
+	.gallery
+		padding: 1em 0
+		&-wrap
+			.gallery-slider-wrap
+				.gallery-slider
+					.item
+						width: 75%
+						margin: 0 auto
+					.center
+						box-shadow: none
+						.video
+							width: 10.25em
+							height: 10.25em
+							img
+								width: 70%
+							&::before
+								top: 30%
+							&::after
+								font-size: 12px
+								bottom: 30%
+					.owl-stage-outer
+						padding: 4em 0
+					.owl-nav
+						.owl-prev
+							right: 93%
+						.owl-next
+							left: 93%
+
+	
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -667,6 +740,57 @@
 					font-size: 1.2em
 
 
+	// Contacts
+
+	.gallery
+		padding: 1em 0 4em
+		&-wrap
+			.gallery-slider-wrap
+				.gallery-slider
+					.item
+						width: 75%
+						margin: 0 auto
+					.center
+						box-shadow: none
+						.video
+							width: 7.25em
+							height: 7.25em
+							img
+								width: 70%
+							&::before
+								top: 30%
+								font-size: 10px
+							&::after
+								font-size: 10px
+								bottom: 30%
+					.owl-stage-outer
+						padding: 4em 0
+					.owl-nav
+						top: 89%
+						.owl-prev
+							right: 65%
+						.owl-next
+							left: 65%
+
+
+	// Company
+
+	.company
+			.company-wrap
+				h2
+					font-size: 1.5em
+				h1
+					font-size: 3.8em
+					margin-bottom: 0.7em
+
+	.points
+		&-wrap
+			.points__items-wrap
+				flex-flow: wrap
+				justify-content: center
+				.point
+					&:nth-child(2n)
+						margin-top: 1em
 
 
 
