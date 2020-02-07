@@ -275,7 +275,51 @@ section
 			opacity: 0
 		
 		&.mfp-bg 
-			opacity: 0 
+			opacity: 0
+
+// Error
+
+.error
+	background: radial-gradient(circle, rgba(255,255,255,1) 30%, rgba(100,103,109,1) 100%)
+	height: 100vh
+	position: relative
+	.error-wrap
+		height: 100vh
+		width: 100vw
+		background-image: url('../img/404-bg.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% -50%
+		position: relative
+		.error__headline
+			max-width: 57em
+			margin: 0 auto
+			position: relative
+			text-align: right
+			h1
+				font-size: 16.56em
+				background-image: linear-gradient(to top, #c10029 0%, #69002f 100%)
+				background-clip: text
+				color: transparent
+			h2
+				font-size: 77px
+				font-weight: 400
+			.btn
+				background-color: none
+				background-image: none
+				border: 3px solid #69002f
+				color: #000
+				padding: 7px 40px
+				font-size: 14px
+				margin-top: 2em
+				&::after
+					display: none
+		.maint
+			position: absolute
+			left: 50%
+			bottom: 1em
+			transform: translateX(-50%)
+
 
 .top-active
 	border-bottom: 1px solid $accent
@@ -2044,7 +2088,408 @@ section
 						transform: translate(-50%, -50%)
 
 
+.gallery-company
+	padding: 4em 0
+	.gallery-company-wrap
+		max-width: 103.25em
+		margin: 0 auto
+		padding: 0 0.8em
+		position: relative
+		text-align: center
+		h1
+			font-size: 123px
+			font-weight: 400
+			color: #e2e3e4
+			margin-bottom: 0.5em
+			&::before
+				content: ''
+				height: 2px
+				width: 50%
+				background-color: #20252e
+				position: absolute
+				top: 11%
+				// transform: translateX(-50%)
+				left: -4.5em
+			&::after
+				content: ''
+				height: 2px
+				width: 50%
+				background-color: #20252e
+				position: absolute
+				top: 11%
+				// transform: translateX(-50%)
+				right: -4.5em
+		.gallery__btns
+			.btn
+				font-size: 20px
+				&:first-child
+					background-color: #fff
+					background-image: none
+					border: 3px solid #69002f
+					color: #000
+					padding: 7px 40px
+					&::after
+						display: none
+				&:last-child
+					padding: 9px 45px
+					margin-left: 3em
+
+		.gallery-slider-wrap
+			.gallery-slider
+				.item
+					position: relative
+					border: 2px solid #69002f
+					.video
+						position: absolute
+						z-index: -1
+						opacity: 0
+						display: flex
+						justify-content: center
+						align-items: center
+						align-self: flex-end
+						left: 50%
+						top: 50%
+						transform: translate(-50%, -50%)
+						// transform: translateY(-50%)
+						background-color: #69002f7a
+						width: 14.25em
+						height: 14.25em
+						// opacity: 0.48
+						border-radius: 10em
+						border: 2px solid #ffffff67
+						transition: .4s ease
+						img
+							flex: 0 0 30px
+						&::before
+							content: '►'
+							position: absolute
+							color: #fff
+							top: 80px
+							transition: .4s ease
+						&::after
+							content: 'Смотреть видео'
+							position: absolute
+							text-align: center
+							text-transform: uppercase
+							width: 50%
+							color: #fff
+							font-size: 14px
+							bottom: 75px
+							transition: .4s ease
+						&:hover
+							background: darken(#69002faf, 5%)
+							transform: scale(1.01) translate(-50%, -50%)
+					&::before
+						content: ''
+						background: url("../img/header-el.svg") no-repeat
+						background-size: cover
+						width: 25.6875em
+						height: 23.75em
+						left: 0
+						top: 0
+						position: absolute
+						z-index: 7
+					&::after
+						content: ''
+						background-color: #20252e
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						opacity: 0.65
+						transition: opacity .25s ease
+					&:hover
+						&::after
+							opacity: 0.85
+				.center
+					transform: scale(1.05)
+					box-shadow: 0px 0px 12px 1px $accent
+					.video
+						position: absolute
+						opacity: 1
+						z-index: 99
+						display: flex
+						justify-content: center
+						align-items: center
+						align-self: flex-end
+						left: 50%
+						top: 50%
+						transform: translate(-50%, -50%)
+						// transform: translateY(-50%)
+						background-color: #69002f7a
+						width: 14.25em
+						height: 14.25em
+						// opacity: 0.48
+						border-radius: 10em
+						border: 2px solid #ffffff67
+						transition: .4s ease
+						img
+							flex: 0 0 30px
+						&::before
+							content: '►'
+							position: absolute
+							color: #fff
+							top: 80px
+							transition: .4s ease
+						&::after
+							content: 'Смотреть видео'
+							position: absolute
+							text-align: center
+							text-transform: uppercase
+							width: 50%
+							color: #fff
+							font-size: 14px
+							bottom: 75px
+							transition: .4s ease
+						&:hover
+							background: darken(#69002faf, 5%)
+							transform: scale(1.01) translate(-50%, -50%)
+					img
+						position: relative
+						// z-index: 1
+					.item
+						&::before
+							display: none
+						&::after
+							display: none
+
+				.owl-stage-outer
+					padding: 6em 0
+
+				.owl-nav
+					width: 100%
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					z-index: 10
+					.owl-prev
+						right: 101%
+						top: 0
+						padding: 0 5px 0 0
+					.owl-next
+						left: 101%
+						top: 0
+						padding: 0 0 0 5px
+					.owl-next, .owl-prev
+						z-index: 10
+						transition: .4s ease
+						position: absolute
+						display: flex
+						justify-content: center
+						align-items: center
+						font-size: 2.3em
+						border-radius: 10em
+						width: 1.3em
+						height: 1.3em
+						color: $accent
+						border: 2px solid $accent
+						&::after
+							content: ''
+							border-radius: 10em
+							z-index: -1
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							transition: opacity .3s ease
+							opacity: 0
+							background-image: linear-gradient(to top, #c10029 0%, $accent 100%)
+						&:hover
+							opacity: 1
+							box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+							color: #fff
+							&::after
+								opacity: 1
 
 
+.basket
+	margin-top: 114px
+	height: 1000px
+	&-wrap
+		max-width: 103.25em
+		margin: 0 auto
+		padding: 2em 0
+		.ref-path
+				margin-bottom: 1.5em
+				ul
+					display: flex
+					li
+						>a
+							border: none
+							padding: 0 10px
+							color: #000
+					li:not(:last-child)
+						border-right: 1px solid #bbbbbb
+		.purchases-wrap
+			max-width: 93.75em
+			margin: 0 auto
+			padding: 1rem
+			.total
+				text-align: center
+				h1
+					font-size: 24px
+					font-weight: 400
+					margin: 2em 0
+					strong
+						font-family: "PlayfairDisplay"
+						font-size: 2em
+						color: $accent
+						margin-left: 0.3em
+			.purchases
+				display: flex
+				flex-flow: column
+				margin-bottom: 2em
+				.purch
+					display: flex
+					justify-content: space-between
+					align-items: center
+					border-top: 1px solid #707379
+					border-bottom: 1px solid #707379
+					padding: 16px 7px 11px 79px
+					width: 100%
+					height: 160px
+					position: relative
+					.purch-left
+						display: flex
+						flex: 0 0 37px
+						img
+							max-width: 100%
+							display: block
+						&::before
+							content: ''
+							position: absolute
+							background-image: url('../img/slider-bg.png')
+							background-position: center center
+							background-size: cover
+							background-repeat: no-repeat
+							width: 0
+							opacity: 0
+							height: 228px
+							top: -20%
+							left: -1%
+							z-index: 10
+							animation-name: basket
+							animation-duration: 8s
+							animation-direction: alternate-reverse
+							animation-iteration-count: infinite
+					&:hover
+						.purch-left
+							&::before
+								width: 228px
+								opacity: 1
+					.purch-center
+						display: flex
+						align-items: center
+						margin-right: 6em
+						&__name
+							margin-right: 3em
+							i
+							color: $accent
+							font-size: 18px
+							margin-top: 0.5em
+							h2
+								font-size: 24px
+								font-weight: 400
+								color: #000
+						table
+							td
+								padding: 7px 11px 7px 11px
+								span
+									font-weight: bold
+
+					.purch-right
+						display: flex
+						position: relative
+						margin-right: 5em
+						.delete-basket
+							transform: rotate(90deg) translateY(-50%) translateX(2%)
+							position: absolute
+							top: 0
+							right: -55%
+							padding: 7px 5px 6px 7px
+							transition: .4s ease
+							&::before
+								position: absolute
+								content: ''
+								width: 0%
+								height: 100%
+								background-color: #69002f
+								top: 0
+								left: 50%
+								z-index: 1
+								transition: all 0s ease
+							&::after
+								content: '☓'
+								position: absolute
+								top: 0
+								left: 50%
+								z-index: -1
+								font-size: 0
+								transform: rotate(90deg) translateY(24%) translateX(-27%)
+							&:hover
+								color: #ffffff
+								&::before
+									position: absolute
+									content: ''
+									width: 100% 
+									height: 100%
+									background-color: #69002f
+									top: 0
+									left: 0%
+									z-index: 1
+									transition: all .4s ease
+								&::after
+									z-index: 2
+									font-size: 37px
+						.item__buy
+							display: flex
+							justify-content: space-evenly
+							align-items: center
+							position: relative
+							opacity: 1
+							transition: opacity .4s ease
+							z-index: 3
+							strong
+								font-family: "PlayfairDisplay"
+								font-size: 2em
+								color: $accent
+								margin-left: 1em
+							input
+								width: 3em
+								border: 1px solid #fdfdfd
+								border-radius: 10em
+								padding-left: 13px
+							span
+								display: flex
+								justify-content: center
+								align-items: center
+								border-radius: 10em
+								font-size: 1.5em
+								width: 1.5em
+								height: 1.5em
+								cursor: pointer
+								box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+								transition: .7s ease
+							.minus
+								color: $accent
+								border: 2px solid $accent
+								&:hover
+									background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
+									color: #fff
+							.plus
+								background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
+								color: #fff
+								&:hover
+									border: 2px solid $accent
+									background: none
+									color: $accent
+
+@keyframes basket
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
 
 @import "media" // Always at the end

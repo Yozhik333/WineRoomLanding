@@ -444,8 +444,49 @@
 				flex-flow: wrap
 				justify-content: center
 
+	// Basket
+
+	.basket
+		&-wrap
+			.purchases-wrap
+				.purchases
+					.purch
+						justify-content: flex-start
+						.purch-center
+							margin: 0 0 0 7em
+							flex-flow: wrap
+							width: 35%
+							&__name
+								margin: 0
+						.purch-right
+							margin: 0
+
 // ≥992px
 +media-breakpoint-down(md)
+
+	// Error
+
+	.error
+		.error-wrap
+			background-position: 57% -50%
+			.error__headline
+				padding: 0 5em
+				h1
+					font-size: 12.56em
+					background-image: linear-gradient(to top, #c10029 0%, #69002f 100%)
+					background-clip: text
+					color: transparent
+				h2
+					font-size: 47px
+					font-weight: 400
+				.btn
+					background-color: none
+					background-image: none
+					border: 3px solid #69002f
+					color: #000
+					padding: 7px 40px
+					font-size: 14px
+			.maint
 
 	.top-line
 		.top-line-wrap
@@ -501,10 +542,52 @@
 						.owl-next
 							left: 93%
 
-	
+
+	// Basket
+
+	.basket
+		&-wrap
+			.purchases-wrap
+				.purchases
+					.purch
+						justify-content: flex-start
+						flex-flow: wrap
+						height: 100%
+						.purch-center
+							margin: 0 0 0 7em
+							flex-flow: wrap
+							width: 55%
+							&__name
+								margin: 0
+						.purch-right
+							margin: 5em auto 0
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+	// Error
+
+	.error
+		.error-wrap
+			background-position: 67% -50%
+			.error__headline
+				padding: 0 5em
+				h1
+					font-size: 12.56em
+					background-image: linear-gradient(to top, #c10029 0%, #69002f 100%)
+					background-clip: text
+					color: transparent
+				h2
+					font-size: 47px
+					font-weight: 400
+				.btn
+					background-color: none
+					background-image: none
+					border: 3px solid #69002f
+					color: #000
+					padding: 7px 40px
+					font-size: 14px
+			.maint
 
 	.top-line
 		.top-line-wrap
@@ -625,6 +708,28 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
+
+	// Error
+
+	.error
+		.error-wrap
+			background-position: 57% -50%
+			.error__headline
+				padding: 0
+				text-align: center
+				h1
+					font-size: 9.56em
+					background-image: linear-gradient(to top, #c10029 0%, #69002f 100%)
+					background-clip: text
+					color: transparent
+					text-align: right
+				h2
+					font-size: 43px
+					font-weight: 400
+					text-align: right
+				.btn
+					margin-top: 16em
+			.maint
 
 	.top-line
 		.top-line-wrap
