@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Оплата и доставка</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/WineRoom.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div id="header"></div>
+	<!-- /.top-line -->
+
+	<section class="payment">
+		<div class="payment-wrap">
+
+			<nav class="ref-path">
+				<ul>
+					<li><a href="#">Каталог товаров</a></li>
+					<li><a href="#">Карточка напитка</a></li>
+					<li><a href="#">Корзина</a></li>
+					<li><a href="#">Оплата и Доставка</a></li>
+				</ul>
+			</nav>
+
+			<div class="decor">
+
+				<div class="decor-left">
+					<h1>Оформление заказа</h1>
+
+					<form class="contact-form" id="contact-form_1" method="POST" enctype="multipart/form-data">
+						<p class="contact-form__description"></p>
+						<div class="contact-form__input-wrapper">
+							<input name="name" type="text" class="contact-form__input contact-form__input_name" placeholder="Введите ваше имя">
+							<div class="contact-form__error contact-form__error_name"></div>
+						</div>
+
+						<div class="contact-form__input-wrapper">
+							<input name="tel" type="tel" class="contact-form__input contact-form__input_tel" placeholder="Введите ваш телефон">
+							<div class="contact-form__error contact-form__error_tel"></div>
+						</div>
+					
+						<div class="contact-form__input-wrapper"> 
+							<input name="email" type="email" class="contact-form__input contact-form__input_email" placeholder="Введите ваш email">
+							<div class="contact-form__error contact-form__error_email"></div>
+						</div>
+
+						<div class="methods-wrapper">
+							<h3>Способ получения</h3>
+							<div class="contact-form__input-wrapper">
+								<input type="checkbox" name="approve" class="contact-form__input contact-form__checkbox" id="approve" checked>
+								<label for="approve" class="contact-form__checkbox-label">Согласовать с менеджером</label>
+								<div class="contact-form__error contact-form__error_approve"></div>
+							</div>
+							<div class="contact-form__input-wrapper">
+								<input type="checkbox" name="extradition" class="contact-form__input contact-form__checkbox" id="extradition" checked>
+								<label for="extradition" class="contact-form__checkbox-label">Я принимаю условия <a href="#">пользовательского соглашения</a></label>
+								<div class="contact-form__error contact-form__error_extradition"></div>
+							</div>
+						</div>
+					
+						<div class="total">
+							<h3>Итого к оплате: <strong>24000 тг</strong></h31>
+							<a href="payment.html" class="btn">Оформить заказ</a>
+						</div>
+
+					</form>
+
+				</div>
+				<!-- /.decor-left -->
+
+				<div class="decor-right">
+
+				</div>
+				<!-- /.decor-right -->
+
+			</div>
+			<!-- /.decor -->
+
+		</div>
+		<!-- /.basket-wrap -->
+	</section>
+	<!-- /.basket -->
+
+	<div id="footer"></div>
+
+	<!-- Hidden -->
+
+	<div class="hidden">
+
+		<div class="modal mfp-with-anim mfp-hide" data-effect="mfp-3d-unfold"></div>
+		<!-- /.modal -->
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Site Name"> <!-- Название сайта -->
+		<input type="hidden" name="admin_email" value="admin@mail.com"> <!-- E-mail -->
+		<input type="hidden" name="form_subject" value="Form Subject"><!-- Тема пиьсма -->
+		<!-- END Hidden Required Fields -->
+		
+	</div>
+	<!-- /.hidden -->
+
+	<script src="js/scripts.min.js" async></script>
+
+</body>
+</html>

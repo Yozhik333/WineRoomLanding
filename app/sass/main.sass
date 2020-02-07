@@ -9,6 +9,18 @@
 	background-color: $accent
 	color: #fff
 
+::-webkit-scrollbar
+	width: 12px
+
+::-webkit-scrollbar-track
+	background: #f7f7f7
+
+::-webkit-scrollbar-thumb
+	background: $accent
+	border-radius: 8px
+	border: 3px solid #f7f7f7
+	&:hover
+		background: lighten($accent, 10%)
 
 html
 	overflow-x: hidden !important
@@ -2031,13 +2043,21 @@ section
 					&::before
 						content: ''
 						position: absolute
-						height: 50%
+						top: 50%
 						bottom: -5px
 						left: -5px
 						right: -5px
-						background-color: #69002f
+						background: linear-gradient(#69002f, #b10050)
+						background-position: 0 0
+						background-repeat: no-repeat
 						border-radius: 0 0 50% 50% / 0 0 100% 100%
 						z-index: 1
+						animation: wine 7s ease-in-out both
+						@keyframes wine
+							0%
+								background-position-y: 90px
+							100%
+								background-position-y: 0
 						
 				.overlay
 					height: 162px
@@ -2304,9 +2324,12 @@ section
 								opacity: 1
 
 
+	// Basket and Order
+
 .basket
 	margin-top: 114px
-	height: 1000px
+	height: 100%
+	padding: 1em 0
 	&-wrap
 		max-width: 103.25em
 		margin: 0 auto
@@ -2491,5 +2514,101 @@ section
 		transform: rotate(0deg)
 	100%
 		transform: rotate(360deg)
+
+.payment
+	margin-top: 114px
+	height: 100%
+	padding: 1em 0
+	&-wrap
+		max-width: 103.25em
+		margin: 0 auto
+		padding: 2em 0
+		.ref-path
+				margin-bottom: 1.5em
+				ul
+					display: flex
+					li
+						>a
+							border: none
+							padding: 0 10px
+							color: #000
+					li:not(:last-child)
+						border-right: 1px solid #bbbbbb
+
+		.decor
+			.decor-left
+				h1
+					font-size: 36px
+					margin-bottom: 1em
+
+
+.contact-form
+	box-sizing: border-box
+	width: 100%
+	max-width: 400px
+	background: #fff
+	padding: 0 30px 30px
+	box-shadow: 0 3px 35px rgba(0, 0, 0, .1)
+	border-radius: 2px
+	.contact-form__description
+		display: none
+		text-align: center
+		font-size: 18px
+	.total
+		text-align: center
+		h3
+			font-size: 24px
+			font-weight: 400
+			margin: 2em 0
+			strong
+				font-family: "PlayfairDisplay"
+				font-size: 2em
+				color: $accent
+				margin-left: 0.3em
+	.contact-form__input-wrapper
+		margin-bottom: 20px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		.contact-form__input
+			width: 100%
+			height: 50px
+			padding: 0 15px
+			border: 1px solid #e2e2e2
+			background: #fbfbfb
+			border-radius: 5px
+		.contact-form__checkbox
+			width: 15px
+			height: 15px
+			margin: 0 15px 0 0
+
+		.contact-form__checkbox-label
+			width: calc(100% - 30px)
+			font-size: 13px
+	.contact-form__error
+		font-size: 14px
+		width: 100%
+
+// @media (max-width: 480px)
+// 	.form-wrapper
+// 			padding: 15px
+
+// 	.contact-form
+// 			padding: 0 15px 15px
+
+
+// 	.contact-form__title
+// 			margin: 0 -15px 30px
+// 			padding: 15px 30px
+// 			width: calc(100% + 30px)
+// 			font-size: 18px
+
+// 	.contact-form__checkbox
+// 			margin-top: 1px
+// 	.contact-form__checkbox-label
+// 			font-size: 14px
+
+// 	.contact-form__input-wrapper
+// 			align-items: flex-start
 
 @import "media" // Always at the end
