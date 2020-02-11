@@ -325,6 +325,7 @@
 				&__call
 					padding-top: 0
 
+
 	// Brand-Card ==================================================================================================================>
 
 	.single-brands
@@ -333,7 +334,7 @@
 		.brand-wrap
 			.ref-path
 				ul
-					flex-flow: wrap
+					flex-flow: wrap!important
 			.brand
 				align-items: center
 				margin: 2.5em 0 5.5em
@@ -470,17 +471,186 @@
 	.basket
 		&-wrap
 			.purchases-wrap
+				.total
 				.purchases
 					.purch
-						justify-content: flex-start
-						.purch-center
-							margin: 0 0 0 7em
-							flex-flow: wrap
-							width: 35%
-							&__name
-								margin: 0
-						.purch-right
-							margin: 0
+						display: flex
+						align-items: center
+						flex-flow: column
+						padding: 42px 0px 11px
+						width: 100%
+						height: 100%
+						.purch-left-center-wrap
+							display: flex
+							width: 100%
+							justify-content: space-evenly
+							.purch-left
+								img
+							.purch-center
+								display: flex
+								align-items: center
+								margin-left: 2em
+								&__name
+									margin-right: 3em
+									i
+									color: $accent
+									font-size: 18px
+									margin-top: 0.5em
+									h2
+										font-size: 24px
+										font-weight: 400
+										color: #000
+								table
+
+						.purch-right-wrap
+							display: flex
+							flex-flow: column
+							width: 100%
+							.purch-line
+								width: 100%
+								background-color: #a9aeb8
+								margin: 10px 0
+								height: 1px
+							.purch-right
+								display: flex
+								justify-content: space-evenly
+								position: relative
+								width: 100%
+								.delete-basket
+									transform: rotate(0deg) translateY(0) translateX(0)
+									position: relative
+									top: 0
+									right: 0
+									padding: 7px 5px 6px 7px
+									transition: .4s ease
+									font-size: 0px
+									&::before
+										width: 90px
+										height: 100%
+										background-color: #69002f
+										top: 0
+										left: 0
+										z-index: 1
+										transition: all 0s ease
+									&::after
+										content: '☓'
+										position: absolute
+										top: 0
+										left: 50%
+										z-index: 2
+										font-size: 37px
+										color: #fff
+										transform: rotate(90deg) translateY(-50%) translateX(-20%)
+									&:hover
+										color: #ffffff
+										&::before
+											width: 90px
+											height: 100%
+											background-color: lighten(#69002f, 10%)
+											top: 0
+											left: 0
+											transition: all .4s ease
+
+
+	// Payment
+
+	.payment
+		&-wrap
+			.decor
+				display: flex
+				flex-flow: column wrap
+				justify-content: center
+				.decor-left
+					width: 100%
+					h1
+						margin-bottom: 0.5em
+						text-align: center
+				.decor-right
+					width: 100%
+					margin-left: 0
+					order: -1
+					h2
+						font-size: 48px
+						margin: 1em 0 0
+						text-align: center
+
+	.contact-form
+		margin: 0 auto
+		width: 100%
+		max-width: 680px
+		background: #fff
+		padding: 15px
+		// box-shadow: 0 3px 35px rgba(0, 0, 0, .1)
+		// border-radius: 2px
+		.contact-form__description
+		.total
+			margin-top: 4em
+			justify-content: center
+			h3
+				font-size: 27px
+				font-weight: 400
+				margin: 2em 0
+			strong
+				font-size: 36px
+			.btn
+				font-size: 22px
+				padding: 22px 33px
+		.contact-form__input-wrapper
+			.contact-form__input
+				height: 60px
+			.contact-form__checkbox
+
+			.contact-form__checkbox-label
+				font-size: 20px
+			.contact-form__error
+				font-size: 18px
+				width: 100%
+		.methods-wrapper
+			h2
+				font-size: 28px
+				font-weight: 400
+				margin: 1em 0
+
+	.goods
+		padding: 0 20px 40px
+		border: none
+		.goods__price
+			display: flex
+			justify-content: center
+			p
+				font-weight: 600
+				font-size: 32px
+				margin: 1em
+		.goods__items
+			display: flex
+			flex-flow: row wrap
+			height: 488px
+			overflow-y: scroll
+			.goods-item
+				display: flex
+				border-top: 1px solid #9a9da1
+				padding: 13px 0
+				margin: 0 26px 0 0
+				width: 100%
+				.goods-item__img
+					margin-left: 8em
+					flex: 0 0 37px
+					img
+						max-width: 100%
+						display: block
+				.goods-item-description
+					margin-left: 5em
+					h3
+						font-size: 32px
+						margin: 0
+					table
+						font-size: 20px
+						td
+							padding: 7px 11px 0px 0
+							span
+								font-weight: bold
+					strong
+						font-size: 30px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -565,23 +735,18 @@
 
 
 	// Basket
-
+	
 	.basket
 		&-wrap
 			.purchases-wrap
+				.total
 				.purchases
 					.purch
-						justify-content: flex-start
-						flex-flow: wrap
-						height: 100%
-						.purch-center
-							margin: 0 0 0 7em
-							flex-flow: wrap
-							width: 55%
-							&__name
-								margin: 0
-						.purch-right
-							margin: 5em auto 0
+						.purch-left-center-wrap
+							.purch-left
+								width: 50px
+							.purch-center
+								flex-flow: column
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -760,6 +925,17 @@
 							right: 65%
 						.owl-next
 							left: 65%
+
+	// Payment
+	.goods
+		padding: 0 5px 40px
+		.goods__price
+		.goods__items
+			.goods-item
+				.goods-item__img
+					margin-left: 2em
+				.goods-item-description
+					margin-left: 3em
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -964,6 +1140,38 @@
 						margin: 1em 0 0 0
 			.gallery-slider-wrap
 				.gallery-slider
+
+	// Payment
+	.goods
+		.goods__price
+			flex-flow: wrap
+			p
+				margin: 0 1em
+		.goods__items
+			.goods-item
+				flex-flow: wrap
+				.goods-item__img
+					margin: 0 auto 1em
+				.goods-item-description
+
+
+	// Basket
+
+	.basket
+		&-wrap
+			.purchases-wrap
+				.total
+				.purchases
+					.purch
+						.purch-left-center-wrap
+							flex-flow: column
+							.purch-left
+								width: 50px
+							.purch-center
+								flex-flow: column
+						.purch-right-wrap
+
+
 
 
 
