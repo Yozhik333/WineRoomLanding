@@ -164,6 +164,7 @@
 								border-right: 0px
 								border-bottom: 1px solid #bbbbbb
 							li
+								display: block
 								a
 									font-size: 3em
 									.fa
@@ -197,7 +198,7 @@
 									padding: 0
 								input.search-active
 									width: 100%
-									padding: 0 32px 0 15px
+									padding: 10px 32px 10px 15px
 								input::-webkit-input-placeholder
 									color: #fff
 								input:-moz-placeholder
@@ -705,6 +706,28 @@
 					strong
 						font-size: 30px
 
+	// Alco Card
+	.alco-card-info
+		padding: 0 20px
+		.alco-card__img
+			width: 128px
+			img
+				width: 100%
+		.alco-card-info__body
+			width: 80%
+			padding: 0
+			.alco-table
+				display: flex
+				justify-content: flex-start
+				margin-top: 32px
+				flex-flow: column
+				font-size: 18px
+				table
+			.total
+				.total__line
+					right: 0
+					left: 0
+
 // ≥992px
 +media-breakpoint-down(md)
 
@@ -800,6 +823,51 @@
 								width: 50px
 							.purch-center
 								flex-flow: column
+
+	// Alco Card
+	.alco-card-info
+		padding: 0
+		flex-flow: column
+		align-items: center
+		justify-content: center
+		.alco-card__img
+			width: 100px
+			img
+				width: 100%
+		.alco-card-info__body
+			width: 100%
+			.alco-card__headline
+				margin-top: 2em
+			.alco-table
+				display: flex
+				justify-content: flex-start
+				margin-top: 32px
+				flex-flow: column
+				font-size: 18px
+				table
+					tr
+						td
+							width: 300px
+			.total
+				.total__line
+				.total-wrap
+					width: auto
+					.item__buy
+						margin-right: 3em
+
+	.alco-card__characteristic
+		.alco-card__characteristic__description
+			flex-flow: column
+			.characteristic__description
+				width: 100%
+				ul
+					li
+						list-style-type: disc
+						list-style-position: inside
+						margin: 20px 0
+						span
+							padding-left: 10px
+							font-weight: bold
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -989,6 +1057,34 @@
 					margin-left: 2em
 				.goods-item-description
 					margin-left: 3em
+
+	// Alco Card
+	.alco-card-info
+		.alco-card__img
+			width: 100px
+			img
+				width: 100%
+		.alco-card-info__body
+			width: 100%
+			.alco-table
+				table
+					tr
+						td
+							width: 300px
+			.total
+				flex-flow: column
+				margin-top: 0
+				.total__line
+					top: 35%
+				.total__price
+					margin-bottom: 1.5em
+				.total-wrap
+					width: auto
+					flex-flow: column
+					align-items: center
+					.item__buy
+						margin: 0 0 1.5em 0
+
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1238,7 +1334,23 @@
 										top: -4px
 										left: 7px
 
+	// Alco Card
+	.alco-card
+		.alco-card-wrap
+			padding: 0 10px
 
+	.alco-card-info
+		.alco-card__img
+			width: 100px
+			img
+				width: 100%
+		.alco-card-info__body
+			width: 100%
+			.alco-table
+				table
+					tr
+						td
+							width: 50%
 
 
 

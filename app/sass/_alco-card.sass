@@ -181,6 +181,7 @@
 
 
 .alco-card
+	margin: 4em 0
 	.alco-card-wrap
 		max-width: 85em
 		margin: 0 auto
@@ -189,13 +190,161 @@
 .alco-card-info
 	display: flex
 	padding: 0 60px
+	justify-content: space-between
 	.alco-card__img
-	.alco-card__headline
-		// display: inline-flex
-	.alco-card__description
-		display: flex
-		.alco-card__description-wrap
+		width: 128px
+		img
+			width: 100%
+	.alco-card-info__body
+		width: 80%
+		border-bottom: 3px solid #20252e7a
+		padding: 0 0 0 27px
+		.alco-card__headline
+			h2
+				color: $accent
+				font-size: 35px
+				font-weight: 400
+				font-family: 'Panton'
+		.alco-table
 			display: flex
-			.description-elements
+			justify-content: space-between
+			margin-top: 67px
+			// flex-flow: wrap
+			table
+				tr
+					td
+						width: 230px
+						padding: 10px 0
+						span
+							font-weight: 700
+						.alco-table-i
+							color: $accent
+		.total
+			display: flex
+			position: relative
+			align-items: center
+			justify-content: space-evenly
+			margin-top: 2em
+			padding: 10px 0
+			.total__price
+				strong
+					font-family: "PlayfairDisplay"
+					font-size: 36px
+					color: $accent
+					margin-left: 0.3em
+			.total__line
+				background-color: #20252e7a
+				height: 2px
+				left: -27px
+				right: -10px
+				top: 0
+				position: absolute
+				// width: 100%
+			.total-wrap
 				display: flex
-				flex-flow: column
+				width: 60%
+				.item__buy
+					margin-right: 160px
+				.total__btns
+					display: flex
+					align-items: flex-end
+					position: relative
+					.cart
+						margin-right: 20px
+					.btn
+						font-size: 14px
+
+.alco-card__characteristic
+	margin-top: 4em
+	h3
+		font-family: "PlayfairDisplay"
+		font-size: 24px
+		font-weight: 400
+	.alco-card__characteristic__description
+		display: flex
+		justify-content: space-between
+		.characteristic__description
+			width: 45%
+			ul
+				li
+					list-style-type: disc
+					list-style-position: inside
+					margin: 20px 0
+					span
+						padding-left: 10px
+						font-weight: bold
+
+.cart
+	&::before
+		content: ''
+		border-radius: 50%
+		z-index: -1
+		position: absolute
+		top: 0
+		left: 1px
+		transform: translateX(-15%) translateY(-15%)
+		width: 50px
+		height: 50px
+		transition: opacity .3s ease
+		opacity: 0
+		background-image: linear-gradient(to top, #c10029 0%, $accent 100%)
+		box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+	&:hover
+		opacity: 1
+		color: #fff
+		&::before
+			opacity: 1
+		.cls-1
+			fill: #fff
+
+.item__buy
+	display: flex
+	justify-content: space-evenly
+	align-items: center
+	position: relative
+	opacity: 1
+	transition: opacity .4s ease
+	z-index: 3
+	strong
+		font-family: "PlayfairDisplay"
+		font-size: 2em
+		color: $accent
+		margin-left: 1em
+	input
+		width: 3em
+		border: 1px solid #fdfdfd
+		border-radius: 10em
+		padding-left: 17px
+	span
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 10em
+		font-size: 1.5em
+		width: 1.5em
+		height: 1.5em
+		cursor: pointer
+		box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+		transition: .7s ease
+	.minus
+		color: $accent
+		border: 2px solid $accent
+		&:hover
+			background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
+			color: #fff
+	.plus
+		background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
+		color: #fff
+		&:hover
+			border: 2px solid $accent
+			background: none
+			color: $accent
+
+.alco-cards
+	margin-bottom: 4em
+	.alco-cards-wrap
+		max-width: 103.25em
+		margin: 0 auto
+		h2
+			font-weight: 400
+			text-align: center
