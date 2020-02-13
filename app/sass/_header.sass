@@ -55,6 +55,11 @@
 					ul
 						display: flex
 						align-items: center
+						li
+							a
+								&:hover
+									text-shadow: 0px 0px 0px #69002F, 0px 0px 0px #69002F, 0px 0px 0px #69002F, 0px 0px 1px #69002F
+									font-weight: normal
 				.top-menu
 					padding-top: 0.5em
 					ul
@@ -91,19 +96,38 @@
 					.social
 						display: flex
 						a
-							font-size: 1.3em
-							margin: 0 0 0 10px
-						.instagram
 							display: flex
-							flex-direction: column
-							text-align: center
+							flex-flow: column
 							justify-content: center
-							color: #fff
-							background: linear-gradient(to top, #c10029 0%, $accent 100%)
-							width: 2.9em
-							height: auto
-							padding: 0 1px 0 0
-							border-radius: 10em
+							align-items: center
+							border-radius: 50%
+							position: relative
+							// padding: 6px 10px
+							font-size: 23px
+							width: 50px
+							height: 30px
+							position: relative
+							z-index: 1
+							&::before
+								content: ''
+								border-radius: 50%
+								z-index: -1
+								position: absolute
+								left: 0
+								right: 0
+								bottom: 0
+								top: 0
+								background-image: radial-gradient(circle 27px at 49.24% 62.62%, #c10029 0%, #69002f 100%)
+								background-size: 0% 0%
+								background-position: 50% 50%
+								background-repeat: no-repeat
+								transition: .1s
+								box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
+							&:hover
+								color: #fff
+								&::before
+									background-position: 100% 100%
+									background-size: 100% 100%
 					.searches
 						align-self: flex-end
 						display: flex
@@ -163,35 +187,24 @@
 									fill: #fff
 						form
 							position: relative
-							&::before
-								content: "\f002"
-								font-family: FontAwesome
-								font-size: 27px
-								color: #fff
-								position: absolute
-								z-index: 5
-								left: -1.7em
-								top: 0.3em
 							input
-								height: 42px
 								width: 0
-								padding: 0 32px 0 15px
 								border: none
 								outline: none
 								background: transparent
 								border-bottom: 2px solid transparent
 								transition: .4s cubic-bezier(0, 0.8, 0, 1)
 								position: absolute
-								top: 0.3em
+								top: 0.5em
 								right: 0.7em
 								z-index: 2
 								cursor: pointer
-							// input::-webkit-input-placeholder
-							// 	border-bottom: 2px solid #f6f6f6
-							// input:-moz-placeholder
-							// 	color: #fff
-							// input:-ms-input-placeholder
-							// 	color: #fff
+							input::-webkit-input-placeholder
+								border-bottom: 2px solid #f6f6f6
+							input:-moz-placeholder
+								color: #fff
+							input:-ms-input-placeholder
+								color: #fff
 							input.search-active
 								width: 200px
 								z-index: 1
