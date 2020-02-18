@@ -221,6 +221,23 @@ $('#photo-gallery').click(function () {
 	$('#gallery-slider1').toggleClass('gallery-passive');
 });
 
+// Catalog Filter
+
+let btnClose = document.getElementById('filter-close')
+
+$(btnClose).click(function () {
+		$('#filter-open').addClass('filter-open-active');
+});
+
+$('#filter-close2').click(function () {
+	$('#filter-open').addClass('filter-open-active');
+});
+
+$('#filter-open-remove').click(function () {
+	$('#filter-open').removeClass('filter-open-active');
+})
+
+
 // 2GIS MAP должен в самом низу
 
 let map;
