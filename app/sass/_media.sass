@@ -728,6 +728,15 @@
 					right: 0
 					left: 0
 
+	// Filter 
+	.filter-open
+		.filter-open-wrap
+			.filter-open__footer
+				justify-content: center
+				margin: 50px 0 100px
+				&::before
+					display: none
+
 // ≥992px
 +media-breakpoint-down(md)
 
@@ -779,6 +788,11 @@
 					.top-menu
 						ul
 							width: 100%
+					.btm-menu
+						ul
+							li
+								a
+									align-items: center
 
 
 	.gallery
@@ -1360,7 +1374,21 @@
 							width: 50%
 
 
+	// Filter 
+	.filter-open-active
+		width: 100% !important
 
+	.filter-open
+		.filter-open-wrap
+			.filter-open__head
+				margin-top: 20px
+			.filter-open__body
+				justify-content: center
+			.filter-open__footer
+				justify-content: center
+				margin: 50px 0 100px
+				&::before
+					display: none
 
 
 /*==========  Mobile First  ==========*/

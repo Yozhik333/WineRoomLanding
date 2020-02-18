@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Каталог товаров</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/WineRoom.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div id="header"></div>
+	<!-- /.top-line -->
+
+	<div id="filter-close" class="filter-close">
+		<img src="img/filter-icon-close.svg" alt="Закрытый фильтр">
+	</div>
+	<!-- /.filter-close -->
+
+	<div id="filter-open" class="filter-open">
+		<div class="filter-open-wrap">
+			<div class="filter-open__head">
+				<div class="filter-open__head--headline">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><g><path fill="#c10029" d="M23.525.382l-1.512 9.994v.002l-1.406 9.287v3.9H3.227v-4.078h.004L.337.382zm-1.279 1.101H1.616l1.347 8.893c.002 0 6.03-2.679 8.969 0 2.201 2.008 6.762 1.007 8.91.378z"/></g></g></svg>
+					<h2>Фильтры</h2>
+				</div>
+				<div id="filter-open-remove" class="filter-open__head--btn">
+					&times;</div>
+			</div>
+			<div class="filter-open__body">
+				<div class="filter-category">
+					<div class="filter-category__headline">
+						Объем
+					</div>
+					<ul>
+						<li>
+							<input type="checkbox" name="volume" id="volume1">
+							<label for="volume1">0,75 литра</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="volume2">
+							<label for="volume2">1,5 литра</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="volume3">
+							<label for="volume3">0,375 литра</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="volume4">
+							<label for="volume4">0,75 литра</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="volume5">
+							<label for="volume5">0,75 литра</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="volume6">
+							<label for="volume6">0,75 литра</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter-category">
+					<div class="filter-category__headline">
+						Страна
+					</div>
+					<ul>
+						<li>
+							<input type="checkbox" name="volume" id="country1">
+							<label for="country1">Австралия</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="country2">
+							<label for="country2">Германия</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="country3">
+							<label for="country3">Испания</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="country4">
+							<label for="country4">Италия</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="country5">
+							<label for="country5">Литва</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="country6">
+							<label for="country6">Новая Зеландия</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="country7">
+							<label for="country7">Россия</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter-category">
+					<div class="filter-category__headline">
+						Производитель
+					</div>
+					<ul>
+						<li>
+							<input type="checkbox" name="volume" id="manufacturer1">
+							<label for="manufacturer1">Moet Chandon</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="manufacturer2">
+							<label for="manufacturer2">Moet</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="manufacturer3">
+							<label for="manufacturer3">Moet</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="manufacturer4">
+							<label for="manufacturer4">MerottoPiper-Heidsieck</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="manufacturer5">
+							<label for="manufacturer5">Codorniu</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter-category">
+					<div class="filter-category__headline">
+						Цена
+					</div>
+					<ul>
+						<li>
+							<input type="radio" name="volume" id="price1">
+							<label for="price1">До 500 тг</label>
+						</li>
+						<li>
+							<input type="radio" name="volume" id="price2">
+							<label for="price2">От 500 до 1000 тг</label>
+						</li>
+						<li>
+							<input type="radio" name="volume" id="price3">
+							<label for="price3">От 500 до 1000 тг</label>
+						</li>
+						<li>
+							<input type="radio" name="volume" id="price4">
+							<label for="price4">От 500 до 1000 тг</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter-category">
+					<div class="filter-category__headline">
+						Цвет
+					</div>
+					<ul>
+						<li>
+							<input type="checkbox" name="volume" id="color1">
+							<label for="color1">Игристое-белое</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color2">
+							<label for="color2">Шампанское-белое</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color3">
+							<label for="color3">Шампанское-розове</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color4">
+							<label for="color4">Игристое-розовое</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color5">
+							<label for="color5">Игристое-красное</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter-category">
+					<div class="filter-category__headline">
+						Сорт винограда
+					</div>
+					<ul>
+						<li>
+							<input type="checkbox" name="volume" id="color1">
+							<label for="color1">Игристое-белое</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color2">
+							<label for="color2">Шампанское-белое</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color3">
+							<label for="color3">Шампанское-розове</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color4">
+							<label for="color4">Игристое-розовое</label>
+						</li>
+						<li>
+							<input type="checkbox" name="volume" id="color5">
+							<label for="color5">Игристое-красное</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="filter-open__footer">
+				<!-- <div class="filter-open__footer--img">
+					<img src="img/filter-bg.jpg" alt="Цветочек">
+				</div> -->
+				<a href="#" class="btn">Применить фильтры</a>
+				<a href="#" class="btn">Сбросить все</a>
+			</div>
+		</div>
+		<!-- /.filter-open-wrap -->
+	</div>
+	<!-- /.filter-open -->
+
+	<section class="catalog" style="background-image: url('../img/wines/catalog-bg.jpg')">
+		<div class="catalog-wrap">
+
+			<h1>Каталог товаров</h1>
+
+			<div class="filter-wrap">
+				<div id="filter-close2" class="filter-head">
+					<div class="filter-head__icon">
+						<img src="img/filter-icon.svg" alt="Фильтр">
+					</div>
+					<div class="filter-head__description">
+						<p>Фильтры<span> (2)</span></p>
+					</div>
+				</div>
+				<div class="filter-body">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">&times;</a>
+								<p><i>Страна:</i> Грузия</p>
+							</li>
+							<li>
+								<a href="#">&times;</a>
+								<p><i>Производитель:</i> Bodegas Chivite</p>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<nav class="ref-path">
+				<ul>
+					<li><a href="#">Каталог товаров</a></li>
+				</ul>
+			</nav>
+
+		</div>
+		<!-- /.catalog-wrap -->
+	</section>
+	<!-- /.catalog -->
+
+	<section class="catalog-cards">
+		<div class="catalog-wrap">
+
+				<div class="selects">
+					<select>
+						<option hidden>Сортировать по</option>
+						<option>Сортировка1</option>
+						<option>Сортировка2</option>
+					</select>
+				</div>
+
+			<div class="catalog-slider-wrap">
+				<div class="owl-carousel catalog-slider">
+					<div class="item">
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+						<div class="wine-card">
+							<a href="alco-card.html">
+								<img src="img/wine.png" alt="Бутылка вина">
+								<i>Полусухое красное</i>
+								<h3>Sunkloof Shiraz Reserve</h3>
+								<p>ЮАР    0,75л</p>
+								<strong>5000тг</strong>
+							</a>
+							<div class="item__buy">
+								<span class="minus">-</span>
+								<input type="text" value="0">
+								<span class="plus">+</span>
+								<a href="#" class="black-btn">В корзину</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.owl-carousel brands -->
+				<div class="slider-counter"></div>
+			</div>
+			<!-- /.catalog-slider-wrap -->
+		</div>
+	</section>
+	<!-- /.catalog-cards -->
+
+	<div id="footer"></div>
+
+	<!-- Hidden -->
+
+	<div class="hidden">
+
+		<div class="modal mfp-with-anim mfp-hide" data-effect="mfp-3d-unfold"></div>
+		<!-- /.modal -->
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Site Name"> <!-- Название сайта -->
+		<input type="hidden" name="admin_email" value="admin@mail.com"> <!-- E-mail -->
+		<input type="hidden" name="form_subject" value="Form Subject"><!-- Тема пиьсма -->
+		<!-- END Hidden Required Fields -->
+		
+	</div>
+	<!-- /.hidden -->
+
+	<script src="js/scripts.min.js" async></script>
+
+</body>
+</html>

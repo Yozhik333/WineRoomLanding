@@ -60,7 +60,7 @@
 
 .filter-close
 	position: fixed
-	z-index: 999
+	z-index: 195
 	top: 290px
 	left: 7px
 	cursor: pointer
@@ -108,11 +108,13 @@
 .filter-open
 	width: 0
 	position: fixed
-	z-index: 9999
+	z-index: 200
 	top: 114px
+	right: 0
+	bottom: 0
+	left: 0
 	background-color: #fff
-	height: 900px
-	overflow-y: scroll
+	overflow-y: auto
 	border: 1px solid #0e0301
 	transition: width .3s ease
 	&-wrap
@@ -120,20 +122,12 @@
 		margin: 0 auto
 		padding: 0 15px
 		&::before
-			content: ''
-			background: url("../img/header-el1.svg") no-repeat
-			background-size: cover
-			width: 25.6875em
-			height: 23.75em
-			left: 0
-			bottom: 0
-			position: absolute
-			transform: rotate(-180deg)
 		.filter-open__head
 			margin-top: 50px
 			display: flex
 			align-items: center
 			justify-content: space-between
+			padding: 0 10px
 			.filter-open__head--headline
 				display: flex
 				align-items: center
@@ -171,17 +165,28 @@
 							margin: 0 10px 0 0
 
 		.filter-open__footer
-			height: 200px
 			display: flex
 			position: relative
 			justify-content: flex-end
 			align-items: center
+			position: relative
+			margin: 100px 0
 			&::before
 				content: ''
 				position: absolute
 				height: 2px
-				background-color: #000000
+				background-color: #616680
 				left: 23%
-				right: 25%
+				right: 320px
+			&::after
+				content: ''
+				background: url("../img/header-el1.svg") no-repeat
+				background-size: cover
+				width: 15.6875em
+				height: 13.75em
+				left: 0
+				bottom: -50px
+				position: absolute
+				transform: rotate(-180deg)
 			a:not(:last-child)
 				margin-right: 40px
