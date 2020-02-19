@@ -1,5 +1,10 @@
 $(function () {
 
+	$(function () {
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	});
+
 	$(document).ready(function() {
 		$(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
 			disableOn: 700,
@@ -12,10 +17,17 @@ $(function () {
 		});
 	});
 
-	$(function () {
-		$("#header").load("header.html");
-		$("#footer").load("footer.html");
-	});
+		$('.modal').magnificPopup({
+			type: 'inline',
+			preloader: false,
+			focus: '#username',
+			modal: true
+		});
+		$(document).on('click', '.popup-modal-dismiss', function (e) {
+			e.preventDefault();
+			$.magnificPopup.close();
+		});
+
 
 	$('.image-popup-no-margins').magnificPopup({
 		type: 'image',

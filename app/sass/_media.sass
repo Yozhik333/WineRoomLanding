@@ -165,10 +165,15 @@
 								border-bottom: 1px solid #bbbbbb
 							li
 								display: block
+								padding: 0
 								a
 									font-size: 3em
+									justify-content: flex-start
 									.fa
 										padding-right: 0.5em
+								&:hover
+									.btm-menu__hidden
+										visibility: hidden
 
 				.top-line__media
 					flex-flow: wrap
@@ -769,7 +774,7 @@
 			.top-line-body
 				.brand
 				.top-line__menu
-					.brand, .social, .license
+					.brand, .license
 						display: block
 					.brand
 						&::before
@@ -779,7 +784,7 @@
 					.license
 					
 					.social
-					
+						display: flex
 					.top-menu, .btm-menu
 						ul
 							li
@@ -926,8 +931,6 @@
 						display: none
 					&::after
 						display: none
-					.brand, .social, .license
-						display: block
 					.brand
 						&::before
 						.logo
@@ -1143,7 +1146,6 @@
 					&::before
 					&::after
 					.brand, .social, .license
-						display: block
 					.brand
 						margin-top: 31em
 						&::before

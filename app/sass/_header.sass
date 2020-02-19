@@ -75,7 +75,6 @@
 							padding: 0 20px 0 7px
 						li
 							width: auto
-							position: relative
 							a
 								display: flex
 								align-items: center
@@ -105,15 +104,37 @@
 							&:hover
 								.btm-menu__hidden
 									visibility: visible
+									opacity: 1
 							.btm-menu__hidden
 								visibility: hidden
+								opacity: 0
 								position: absolute
 								background-color: #fff
-								width: 100%
+								left: 0
+								right: 0
+								border-bottom: 1px solid #000000
+								transition: .4s ease
 								.btm-menu__hidden-wrap
-									max-width: 93.625em
-									padding: 30px
-
+									display: flex
+									justify-content: space-between
+									padding: 20px
+									.btm-menu__category
+										margin-right: 20px
+										.btm-menu__hidden__headline
+											text-align: center
+											font-weight: bold
+											font-size: 16px
+											margin: 10px 0
+										ul
+											display: block
+											padding: 0
+											li
+												padding: 4px 0
+												border-right: 0px
+												text-transform: none
+												font-size: 14px
+												a
+													padding: 0
 
 			.top-line__media
 				display: flex
