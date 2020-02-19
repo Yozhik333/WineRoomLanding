@@ -5,6 +5,27 @@ $(function () {
 		$("#footer").load("footer.html");
 	});
 
+	// Modal
+
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("js-modal-close")[0];
+
+	btn.onclick = function () {
+		modal.style.visibility = "visible";
+		modal.style.opacity = "1";
+	}
+	span.onclick = function () {
+		modal.style.visibility = "hidden";
+		modal.style.opacity = "0";
+	}
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.visibility = "hidden";
+			modal.style.opacity = "0";
+		}
+	}
+
 	$(document).ready(function() {
 		$(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
 			disableOn: 700,
@@ -17,16 +38,16 @@ $(function () {
 		});
 	});
 
-		$('.modal').magnificPopup({
-			type: 'inline',
-			preloader: false,
-			focus: '#username',
-			modal: true
-		});
-		$(document).on('click', '.popup-modal-dismiss', function (e) {
-			e.preventDefault();
-			$.magnificPopup.close();
-		});
+		// $('.modal').magnificPopup({
+		// 	type: 'inline',
+		// 	preloader: false,
+		// 	focus: '#username',
+		// 	modal: true
+		// });
+		// $(document).on('click', '.popup-modal-dismiss', function (e) {
+		// 	e.preventDefault();
+		// 	$.magnificPopup.close();
+		// });
 
 
 	$('.image-popup-no-margins').magnificPopup({
@@ -248,6 +269,7 @@ $('#filter-close2').click(function () {
 $('#filter-open-remove').click(function () {
 	$('#filter-open').removeClass('filter-open-active');
 })
+
 
 
 // 2GIS MAP должен в самом низу
