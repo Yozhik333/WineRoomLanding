@@ -453,8 +453,8 @@
 			<!-- /.second-sect-slider -->
 
 			<div class="second-sect__btns">
-				<a href="#bron" class="btn wow bounceInRight modal">Забронировать столик</a>
-				<a href="#" class="btn wow bounceInLeft">Посмотрите наше меню</a>
+				<button id="myBtn" class="btn">Забронировать столик</button>
+				<a href="#" class="btn">Посмотрите наше меню</a>
 			</div>
 			<!-- /.second-sect__btns -->
 
@@ -467,17 +467,36 @@
 
 	<!-- Hidden -->
 
-	
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-btn"><i class="js-modal-close">&times;</i></div>
+			<h2>Забронировать стол</h2>
+			<nav>
+				<div class="modal-data-wrap">
+					<input id="modal-data" type="text" placeholder="Дата">
+					<label for="modal-data"></label>
+					<input id="modal-time" type="text" placeholder="Время">
+					<label for="modal-time"></label>
+					<input id="modal-number" type="text" placeholder="Количество">
+					<label for="modal-number"></label>
+				</div>
+				<input id="modal-name" type="text" placeholder="Ваше имя">
+				<label for="modal-name"></label>
+				<input id="modal-tel" type="text" placeholder="Номер телефона">
+				<label for="modal-tel"></label>
+			</nav>
+			<div class="btn">Забронировать</div>
+		</div>
+	</div>
 
 	<div class="hidden">
 
-		<div id="bron" class="modal mfp-with-anim mfp-hide" data-effect="mfp-3d-unfold">
-			<h1>Modal dialog</h1>
+		<!-- <div id="bron" class=" mfp-with-anim mfp-hide" data-effect="mfp-3d-unfold">
 			<p>You won't be able to dismiss this by usual means (escape or
 				click button), but you can close it programatically based on
 				user choices or actions.</p>
 			<p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
-		</div>
+		</div> -->
 		<!-- /.modal -->
 
 		<!-- Hidden Required Fields -->
