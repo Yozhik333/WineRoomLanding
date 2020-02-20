@@ -291,6 +291,7 @@
 								display: flex
 								justify-content: space-between
 								border-bottom: 1px solid #20252e75
+								padding: 0 0 15px 0
 								h2
 									font-weight: 400
 								span
@@ -299,24 +300,50 @@
 										text-decoration: underline
 							.basket-hover-item
 								display: flex
+								padding: 10px 0 17px
+								border-bottom: 1px solid #20252e75
 								.basket-hover__img
 									width: 30px
 									img
 										max-width: 100%
 								.basket-hover__description
+									padding: 0 0 0 10px
+									width: 100%
+									position: relative
+									.basket-hover__description-delete
+										position: absolute
+										font-size: 30px
+										cursor: pointer
+										right: 0
+										top: 0
+										&:hover
+											color: $accent
+											transition: color .4s ease
 									i
 										color: $accent
 									p
 										margin: 17px 0
+									.item__buy
+										justify-content: space-around
+										.minus,
+										.plus
+											font-size: 1.3em
+											width: 1.3em
+											height: 1.3em
+										strong
+											font-size: 1.2em
 							.total
 								text-align: center
-								h1
-									font-size: 24px
+								display: flex
+								flex-flow: wrap
+								justify-content: center
+								h3
+									font-size: 18px
 									font-weight: 400
-									margin: 2em 0
+									margin: 1.5em 0
 									strong
 										font-family: "PlayfairDisplay"
-										font-size: 2em
+										font-size: 1.3em
 										color: $accent
 										margin-left: 0.3em
 
