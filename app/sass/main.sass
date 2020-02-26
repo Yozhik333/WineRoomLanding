@@ -507,13 +507,17 @@ section
 				margin: 0
 				line-height: 1
 			h1
-				font-size: 7.8em
+				font-size: 124px
 				background-image: linear-gradient(to top, #c10029 0%, #69002f 100%)
 				background-clip: text
 				color: transparent
+				@media screen and ( max-width: 1400px)
+					font-size: fs(100, 124, 1200, 1400)
 			h2
-				font-size: 2.2em
+				font-size: 35px
 				color: #fff
+				@media screen and ( max-width: 1400px)
+					font-size: fs(28, 35, 1200, 1400)
 
 		.video
 			position: absolute
@@ -788,11 +792,20 @@ section
 
 
 .main-footer
-	background-image: url("../img/footer-bg.webp")
+	background-image: url("../img/footer-el-bg.png")
 	background-repeat: no-repeat
 	background-position: 50% -30%
 	// background-size: cover
 	height: 215px
+	position: relative
+	&::before
+		content: ''
+		background-color: $accent
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 24px
 	.footer-wrap
 		max-width: 103.25em
 		margin: 0 auto
@@ -877,7 +890,7 @@ section
 	&::before
 		content: ''
 		position: absolute
-		background-image: url('../img/brands/brands-el-bg.webp')
+		background-image: url('../img/brands/brands-el-bg.png')
 		min-width: 1920px
 		height: 126px
 		bottom: 0
@@ -1149,7 +1162,7 @@ section
 	&::before
 		content: ''
 		position: absolute
-		background-image: url('../img/brands/brands-el-bg.webp')
+		background-image: url('../img/brands/brands-el-bg.png')
 		min-width: 1920px
 		height: 126px
 		bottom: 0
@@ -1289,7 +1302,7 @@ section
 	&::before
 		content: ''
 		position: absolute
-		background-image: url('../img/brands/brands-el-bg.webp')
+		background-image: url('../img/brands/brands-el-bg.png')
 		min-width: 1920px
 		height: 126px
 		bottom: -1%
@@ -1511,7 +1524,7 @@ section
 	&::before
 		content: ''
 		position: absolute
-		background-image: url('../img/brands/brands-el-bg.webp')
+		background-image: url('../img/brands/brands-el-bg.png')
 		min-width: 1920px
 		height: 126px
 		bottom: -1%
