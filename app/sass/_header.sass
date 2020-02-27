@@ -98,9 +98,9 @@
 									&:last-child
 										display: flex
 										justify-content: center
-										font-size: 100%
+										font-size: 16px
 										text-align: center
-										@media screen and ( max-width: 1500px)
+										@media (min-width: 1200px) and ( max-width: 1500px)
 											font-size: fs(12, 16, 1200, 1500)
 							&:hover
 								.btm-menu__hidden
@@ -116,7 +116,7 @@
 								top: 100px
 								border-radius: 10px
 								border-bottom: 3px solid #000000
-								transition: .4s ease
+								transition: .1s ease
 								.btm-menu__hidden-wrap
 									display: flex
 									justify-content: space-between
@@ -230,7 +230,7 @@
 								position: absolute
 								top: 0
 								left: 0
-								transform: translateX(-15%) translateY(-15%)
+								transform: translateX(-12%) translateY(-15%)
 								width: 42px
 								height: 42px
 								transition: opacity .3s ease
@@ -244,10 +244,11 @@
 									opacity: 1
 								.cls-1
 									fill: #fff
-						&:hover
-							.basket-hover
-								visibility: visible
-								opacity: 1
+						.basket-hover-wrap
+							&:hover
+								.basket-hover
+									visibility: visible
+									opacity: 1
 						form
 							position: relative
 							input
@@ -274,80 +275,97 @@
 								color: #20252e
 								border-bottom: 2px solid #F9F0DA
 
-						.basket-hover
-							visibility: hidden
-							opacity: 0
-							position: absolute
-							transition: .4s ease
-							padding: 27px 16px 34px 10px
-							left: -268px
-							top: 50px
-							z-index: 30
-							right: 0
-							background-color: #fff
-							box-shadow: 0 0 24px rgba(32, 37, 46, 0.26)
-							border: 1px solid #e8e8e8
-							h2
-								font-size: 18px
-							.basket-hover__headline
-								display: flex
-								justify-content: space-between
-								border-bottom: 1px solid #20252e75
-								padding: 0 0 15px 0
-								h2
-									font-weight: 400
-								span
-									cursor: pointer
-									&:hover
-										text-decoration: underline
-							.basket-hover-item
-								display: flex
-								padding: 10px 0 17px
-								border-bottom: 1px solid #20252e75
-								.basket-hover__img
-									width: 30px
-									img
-										max-width: 100%
-								.basket-hover__description
-									padding: 0 0 0 10px
-									width: 100%
-									position: relative
-									.basket-hover__description-delete
-										position: absolute
-										font-size: 30px
-										cursor: pointer
-										right: 0
-										top: 0
-										&:hover
-											color: $accent
-											transition: color .4s ease
-									i
-										color: $accent
-									p
-										margin: 17px 0
-									.item__buy
-										justify-content: space-around
-										.minus,
-										.plus
-											font-size: 1.3em
-											width: 1.3em
-											height: 1.3em
-										strong
-											font-size: 1.2em
-							.total
-								text-align: center
-								display: flex
-								flex-flow: wrap
-								justify-content: center
-								h3
-									font-size: 18px
-									font-weight: 400
-									margin: 1.5em 0
-									strong
-										font-family: "PlayfairDisplay"
-										font-size: 1.3em
-										color: $accent
-										margin-left: 0.3em
+						
 
 			.top-line__burger
 				display: none
+
+
+.basket-hover
+	visibility: hidden
+	opacity: 0
+	position: absolute
+	transition: .4s ease
+	padding: 27px 16px 34px 10px
+	left: -268px
+	top: 49px
+	z-index: 30
+	right: 0
+	background-color: #fff
+	box-shadow: 0 0 24px rgba(32, 37, 46, 0.26)
+	border: 1px solid #e8e8e8
+	@media screen and ( max-width: 1200px)
+		top: 70px
+	@media screen and ( max-width: 576px)
+		top: 70px
+		left: -220px
+	@media screen and ( max-width: 500px)
+		top: 50px
+		left: -220px
+	@media screen and ( max-width: 400px)
+		top: 50px
+		left: -197px
+		right: -22%
+	h2
+		font-size: 18px
+	.basket-hover__headline
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid #20252e75
+		padding: 0 0 15px 0
+		h2
+			font-weight: 400
+		span
+			cursor: pointer
+			&:hover
+				text-decoration: underline
+	.basket-hover-item
+		display: flex
+		padding: 10px 0 17px
+		border-bottom: 1px solid #20252e75
+		.basket-hover__img
+			width: 30px
+			margin: 0 0 0 20px
+			img
+				max-width: 100%
+		.basket-hover__description
+			padding: 0 0 0 10px
+			width: 100%
+			position: relative
+			.basket-hover__description-delete
+				position: absolute
+				font-size: 30px
+				cursor: pointer
+				right: 0
+				top: 0
+				&:hover
+					color: $accent
+					transition: color .4s ease
+			i
+				color: $accent
+			p
+				margin: 17px 0
+			.item__buy
+				justify-content: space-around
+				.minus,
+				.plus
+					font-size: 1.3em
+					width: 1.3em
+					height: 1.3em
+				strong
+					font-size: 1.2em
+
+	.total
+		text-align: center
+		display: flex
+		flex-flow: wrap
+		justify-content: center
+		h3
+			font-size: 18px
+			font-weight: 400
+			margin: 1.5em 0
+			strong
+				font-family: "PlayfairDisplay"
+				font-size: 1.3em
+				color: $accent
+				margin-left: 6px

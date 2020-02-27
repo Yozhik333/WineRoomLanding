@@ -114,7 +114,6 @@ input[type=checkbox]:checked + label:after
 		flex-flow: wrap !important
 
 html
-	overflow-x: hidden !important
 	height: 100%
 
 body
@@ -541,6 +540,11 @@ section
 			// // animation-iteration-count: infinite
 			// animation-timing-function: 8s
 			// animation-delay: 6s
+			img
+				width: auto
+				display: block
+				max-width: 100%
+				height: auto
 			&::before
 				content: '►'
 				position: absolute
@@ -1051,11 +1055,14 @@ section
 							margin: 0 2rem
 							padding: 1rem 0
 							position: relative
-						img
-							margin: 0 auto 1.5rem
-							width: auto
-							height: 6em
-							position: relative
+						.brand-card__img
+							width: 228px
+							height: 146px
+							img
+								max-width: 100%
+								display: block
+								width: auto
+								margin: 0 auto
 						.black-btn
 							display: block
 							visibility: hidden
@@ -1776,7 +1783,10 @@ section
 						border: 2px solid #ffffff67
 						transition: .4s ease
 						img
-							width: 110px
+							width: auto
+							display: block
+							max-width: 100%
+							height: auto
 						&::before
 							content: '►'
 							position: absolute
@@ -1842,7 +1852,10 @@ section
 						border: 2px solid #ffffff67
 						transition: .4s ease
 						img
-							width: 110px
+							width: auto
+							display: block
+							max-width: 100%
+							height: auto
 						&::before
 							content: '►'
 							position: absolute
