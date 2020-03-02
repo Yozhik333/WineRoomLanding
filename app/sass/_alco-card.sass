@@ -10,102 +10,100 @@
 			flex-flow: wrap
 			margin: 0 auto
 			justify-content: center
-			.wine-card
-				width: 18.4em
-				// height: auto
-				text-align: center
-				padding: 2.1em 2em 2.5em
-				margin: 1em
-				transition: .4s ease
-				position: relative
-				color: #000
-				&::before
-					content: ''
-					position: absolute
-					background-color: #fff
-					border: 1px solid #e8e8e8
-					left: 0
-					right: 0
-					top: 0
-					bottom: 0
-					transform: scale(1.01)
-					transition: .4s ease
-				&:hover
-					z-index: 0
-					&::before
-						z-index: 1
-						background: url("../img/slider-bg.png") no-repeat center center
-						box-shadow: 0 0 24px rgba(32, 37, 46, 0.26)
-						transition: .4s ease, background .00000000000000000000001s ease
-						bottom: -0.5em
-						box-shadow: 0 0 24px rgba(32, 37, 46, 0.1)
-						transform: scale(1.05)
+			.wine-card-wrap
+				width: 20%
+				padding: 10px
+				@media (max-width: 1200px)
+					width: 40%
+				@media (max-width: 568px)
+					width: 50%
+					padding: 7px 7px 23px 7px
 					.item__buy
-						visibility: visible
-						opacity: 1
-				i, p, strong, img, h3
+						flex-flow: wrap
+						.black-btn
+							margin: 15px auto 0
+				.wine-card
+					// height: auto
+					text-align: center
+					padding: 1.3em 1em 2.5em
+					transition: .4s ease
 					position: relative
-					z-index: 3
-				img
-					margin: 0 auto
-					width: auto
-					max-height: 15em
-				i
-					color: $accent
-					font-size: 14px
-					margin-top: 0.5em
-				h3
-					font-size: 20px
-					font-weight: bold
-				strong
-					font-family: "PlayfairDisplay"
-					font-size: 2em
-					color: $accent
-					border-top: 1px solid #2e2e2e
-				.item__buy
-					visibility: hidden
-					margin-top: 2em
-					display: flex
-					justify-content: space-evenly
-					position: relative
-					opacity: 0
-					transition: opacity .4s ease
-					z-index: 3
-					input
-						width: 3em
-						border: 1px solid #fdfdfd
-						border-radius: 10em
-						padding-left: 13px
-					span
+					color: #000
+					&::before
+						content: ''
+						position: absolute
+						background-color: #fff
+						border: 1px solid #e8e8e8
+						left: 0
+						right: 0
+						top: 0
+						bottom: 0
+						transform: scale(1.01)
+						transition: .4s ease
+					&:hover
+						z-index: 0
+						&::before
+							z-index: 1
+							opacity: 0.3
+							background: url("../img/slider-bg.png") no-repeat center center
+							background-size: 90%!important
+							box-shadow: 0 0 24px rgba(32, 37, 46, 0.26)
+							transition: .4s ease, background .00000000000000000000001s ease
+							bottom: -0.5em
+							box-shadow: 0 0 24px rgba(32, 37, 46, 0.1)
+							transform: scale(1.05)
+							border: 1px solid #b4b4b4
+						.item__buy
+							visibility: visible
+							opacity: 1
+					i, p, strong, img, h3
+						position: relative
+						z-index: 3
+					&__img
+						width: 63px
+						height: 233px
+						margin: 0 auto 10px
 						display: flex
-						justify-content: center
 						align-items: center
-						border-radius: 10em
-						font-size: 1.5em
-						width: 1.5em
-						height: 1.5em
-						cursor: pointer
-						box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
-						transition: .7s ease
-					.minus
+						justify-content: center
+						img
+							margin: 0 auto
+							display: block
+							max-width: 100%
+							max-height: 100%
+					i
 						color: $accent
-						border: 2px solid $accent
-						&:hover
-							background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
-							color: #fff
-					.plus
-						background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
-						color: #fff
-						&:hover
-							border: 2px solid $accent
-							background: none
-							color: $accent
-					.black-btn
 						font-size: 14px
-						font-weight: 600
-						margin-left: 10px
-						transition: all .4s ease
-		
+						margin-top: 0.5em
+						@media ( max-width: 1200px)
+							font-size: fs(11, 12, 320, 1200)
+					h3
+						font-size: 20px
+						font-weight: bold
+						@media ( max-width: 1200px)
+							font-size: fs(16, 20, 320, 1200)
+					strong
+						font-family: "PlayfairDisplay"
+						font-size: 2em
+						color: $accent
+						border-top: 1px solid #2e2e2e
+						@media (max-width: 1200px)
+							font-size:	fs(21, 36, 320, 1200)
+					.item__buy
+						visibility: hidden
+						opacity: 0
+						margin-top: 40px
+						justify-content: space-around
+						@media (max-width: 1200px)
+							justify-content: space-between
+							visibility: visible
+							opacity: 1
+						.black-btn
+							font-size: 14px
+							padding: 9px 10px
+							font-weight: 600
+							transition: all .4s ease
+
 		.owl-stage-outer
 			padding: 3em 0
 		.owl-nav
@@ -186,6 +184,18 @@
 		max-width: 85em
 		margin: 0 auto
 		padding: 0 20px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			background-image: url('../img/alco-card-el-bg.png')
+			background-repeat: no-repeat
+			width: 444px
+			height: 361px
+			right: -43%
+			bottom: 52%
+			transform: translateY(60%) translateX(-90%)
+			z-index: -1
 
 .alco-card-info
 	display: flex
@@ -193,11 +203,14 @@
 	justify-content: space-between
 	.alco-card__img
 		width: 128px
+		margin: 0 auto
 		img
-			width: 100%
+			max-width: 100%
+			display: block
+			margin: 0 auto
 	.alco-card-info__body
 		width: 80%
-		border-bottom: 3px solid #20252e7a
+		border-bottom: 2px solid #20252e7a
 		padding: 0 0 0 27px
 		.alco-card__headline
 			h2
@@ -223,7 +236,7 @@
 			display: flex
 			position: relative
 			align-items: center
-			justify-content: space-evenly
+			justify-content: space-between
 			margin-top: 2em
 			padding: 10px 0
 			.total__price
@@ -231,18 +244,19 @@
 					font-family: "PlayfairDisplay"
 					font-size: 36px
 					color: $accent
+					font-weight: 700
 					margin-left: 0.3em
 			.total__line
 				background-color: #20252e7a
 				height: 2px
 				left: -27px
-				right: -10px
+				right: 213px
 				top: 0
 				position: absolute
 				// width: 100%
 			.total-wrap
 				display: flex
-				width: 60%
+				width: 67%
 				.item__buy
 					margin-right: 160px
 				.total__btns
@@ -299,8 +313,8 @@
 
 .item__buy
 	display: flex
-	justify-content: space-evenly
 	align-items: center
+	justify-content: space-between
 	position: relative
 	opacity: 1
 	transition: opacity .4s ease
@@ -311,18 +325,19 @@
 		color: $accent
 		margin-left: 1em
 	input
-		width: 3em
+		width: 27px
 		border: 1px solid #fdfdfd
 		border-radius: 10em
-		padding-left: 17px
+		text-align: center
 	span
 		display: flex
 		justify-content: center
 		align-items: center
 		border-radius: 10em
-		font-size: 1.5em
-		width: 1.5em
-		height: 1.5em
+		font-size: 1.2em
+		width: 30px
+		height: 30px
+		padding: 12px
 		cursor: pointer
 		box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.75)
 		transition: .7s ease
@@ -333,12 +348,11 @@
 			background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
 			color: #fff
 	.plus
-		background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
-		color: #fff
+		color: $accent
+		border: 2px solid $accent
 		&:hover
-			border: 2px solid $accent
-			background: none
-			color: $accent
+			background: radial-gradient(circle 22px at 49.37% 60.35%, #c10029 0%, $accent 100%)
+			color: #fff
 
 .alco-cards
 	margin-bottom: 4em

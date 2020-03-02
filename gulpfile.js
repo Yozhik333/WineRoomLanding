@@ -97,12 +97,6 @@ gulp.task('build', ['removedist', 'imagemin', 'webp', 'styles', 'js'], function(
 
 });
 
-gulp.task('webp', done => {
-	gulp.src(IMG + '/img/*')
-		.pipe(webp({ quality: 90 }))
-		.pipe(gulp.dest(IMG));
-	done();
-});
 
 gulp.task('rsync', function() {
 	return gulp.src('app/**')
